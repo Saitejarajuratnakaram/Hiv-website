@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    HiveCheck
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="h&f.css" rel="stylesheet">
+  <style>
+    /* General Styles */
+   
+    
+    .search-filter1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+    }
+
+    .search-filter1 .input4,
+    .search-filter1 .select4 {
+      padding: 10px;
+      width: 30%;
+    }
+
+    .card-grid2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .card3 {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card3 img {
+      width: 100%;
+      height: 300px;
+      border-radius: 5px;
+    }
+
+    .card3 .h31 {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .card3 .p31 {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .card3 span {
+      display: block;
+      font-size: 0.8em;
+      color: #999;
+      margin: 10px 0;
+    }
+
+    .card3 .button5 {
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card3 .button5:hover {
+      background-color: #b71c1c;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+
+      .search-filter1 input,
+      .search-filter1 select {
+        width: 45%;
+      }
+
+      .card3 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header start -->
+  <div class="header-unique">
+    <div class="welcome-text-unique">
+        Welcome to a Professional HiveCheck
+    </div>
+    <div class="contact-info-unique">
+        <div>
+            <i class="fas fa-phone-alt"></i> +91 9876543210
+        </div>
+        <div>
+            <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+        </div>
+        <div>
+            <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+        </div>
+    </div>
+</div>
+
+<div class="nav-bar-unique">
+    <div class="nav-bar-logo-unique">
+        <a href="index.html">
+     <img alt="HIV Awareness Logo" height="40" src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg" width="40" /></a>           <h1> HiveCheck </h1>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Doctors</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+    <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+        <i class="fas fa-user"></i> <!-- Profile icon -->
+    </a>
+</div>
+<!-- header end  -->
+
+  <div class="search-filter1">
+    <input class="input4" type="text" id="searchInput" placeholder="Search resources..." />
+    <select class="select4" id="filterCategory">
+      <option value="all">All Categories</option>
+      <option value="guides">Guides</option>
+      <option value="ebooks">eBooks</option>
+      <option value="infographics">Infographics</option>
+    </select>
+    <select class="select4" id="sortOptions">
+      <option value="default">Sort by</option>
+      <option value="date">Date</option>
+      <option value="title">Title</option>
+    </select>
+  </div>
+
+  <main>
+    <div id="cardsContainer" class="card-grid2">
+      <!-- HIV Guides -->
+      <div class="card3" data-category="guides" data-date="2023-05-10" data-title="HIV Prevention Guide">
+        <img src="res1.jpg" alt="Guide">
+        <h3 class="h31">Rapid HIV Check</h3>
+        <p class="p31">A comprehensive Rapid HIV Check to preventing HIV transmission.</p>
+        <span>Date: May 10, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="guides" data-date="2023-05-10" data-title="HIV Prevention Guide">
+        <img src="res2.jpg" alt="Guide">
+        <h3 class="h31">Instant Result Testing</h3>
+        <p class="p31">A comprehensive Instant Result Testing to preventing HIV transmission.</p>
+        <span>Date: June 17, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="guides" data-date="2023-05-10" data-title="HIV Prevention Guide">
+        <img src="res3.jpg" alt="Guide">
+        <h3 class="h31">SpeedTest HIV</h3>
+        <p class="p31">A comprehensive SpeedTest HIV to preventing HIV transmission.</p>
+        <span>Date: August 19, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <!-- eBooks -->
+      <div class="card3" data-category="ebooks" data-date="2023-06-01" data-title="Living with HIV eBook">
+        <img src="res4.jpg" alt="eBook">
+        <h3 class="h31">Fast Detect Service</h3>
+        <p class="p31">An eBook offering tips and strategies for living with HIV.</p>
+        <span>Date: October 2, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="ebooks" data-date="2023-06-01" data-title="Living with HIV eBook">
+        <img src="res5.jpg" alt="eBook">
+        <h3 class="h31">Quick Screen HIV</h3>
+        <p class="p31">An eBook offering tips and strategies for living with HIV.</p>
+        <span>Date: November 19, 2024</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="ebooks" data-date="2023-06-01" data-title="Living with HIV eBook">
+        <img src="res6.jpg" alt="eBook">
+        <h3 class="h31">Rapid Response Testing</h3>
+        <p class="p31">An eBook offering tips and strategies for living with HIV.</p>
+        <span>Date: December 22, 2024</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+
+
+      <!-- Infographics -->
+      <div class="card3" data-category="infographics" data-date="2023-04-15" data-title="HIV Statistics Infographic">
+        <img src="res7.jpg" alt="Infographic">
+        <h3 class="h31">Immediate HIV Results</h3>
+        <p class="p31">An infographic displaying key statistics about HIV worldwide.</p>
+        <span>Date: August 12, 2024</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="infographics" data-date="2023-04-15" data-title="HIV Statistics Infographic">
+        <img src="res8.jpg" alt="Infographic">
+        <h3 class="h31">On-the-Go Testing</h3>
+        <p class="p31">An infographic displaying key statistics about HIV worldwide.</p>
+        <span>Date: October 4, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+      <div class="card3" data-category="infographics" data-date="2023-04-15" data-title="HIV Statistics Infographic">
+        <img src="res9.jpg" alt="Infographic">
+        <h3 class="h31">Mobile Rapid Test</h3>
+        <p class="p31">An infographic displaying key statistics about HIV worldwide.</p>
+        <span>Date: December 13, 2023</span>
+        <a href="HIV_Testing_Resource_Guide.pdf"><button class="button5">Download PDF</button></a>
+      </div>
+
+
+    </div>
+  </main>
+
+
+<!-- footer start -->
+<div class="main-container">
+  <div class="containeress">
+      <div class="section logo-section">
+          <div class="logo-container">
+              <a href="index.html">
+              <img alt="Company Logo" height="100"
+                  src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                  width="100" /></a>
+              <h1>
+                  HiveCheck
+              </h1>
+          </div>
+          <p>
+              Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+              ensure your well-being.
+          </p>
+      </div>
+      <div class="section contact-info">
+          <h2>
+              <a href="contact.html" style="text-decoration: none; color: inherit;">
+                  Contact Info
+              </a>
+          </h2>
+          <p>
+              "Reach out to us for more information about our services and offerings."
+          </p>
+          <div class="icon-text">
+              <i class="fas fa-phone-alt">
+              </i>
+              <span>
+                  +91 9876543210
+              </span>
+          </div>
+          <div class="icon-text">
+              <i class="fas fa-envelope">
+              </i>
+              <span>
+                  HiveCheck@gmail.com
+              </span>
+          </div>
+      </div>
+      <div class="section latest-news">
+          <h2>
+              Quick Links
+          </h2>
+          <div class="quick-links">
+              <ul>
+                  <li class="quick-link-item">
+                      <a href="faq.html">
+                          FAQ
+                      </a>
+                  </li>
+                  <li class="quick-link-item">
+                      <a href="blog.html">
+                          Blog
+                      </a>
+                  </li>
+                  <li class="quick-link-item">
+                      <a href="contact.html">
+                          Contact
+                      </a>
+                  </li>
+                  <li class="quick-link-item">
+                      <a href="services.html">
+                          Services
+                      </a>
+                  </li>
+                  <li class="quick-link-item">
+                      <a href="about.html">
+                          About us
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="section opening-hours">
+          <h2>
+              Opening Hours
+          </h2>
+          <p>
+              Monday - Friday 06:00 AM - 10:00 PM
+          </p>
+          <p>
+              Saturday 09:00 AM - 08:00 PM
+          </p>
+          <p>
+              Sunday Closed
+          </p>
+          <div class="social-icons">
+              <a href="https://www.facebook.com">
+                  <i class="fab fa-facebook-f">
+                  </i>
+              </a>
+              <a href="https://www.linkedIn.com">
+                  <i class="fab fa-linkedin">
+                  </i>
+              </a>
+              <a href="https://www.twitter.com">
+                  <i class="fab fa-twitter">
+                  </i>
+              </a>
+              <a href="https://www.instagram.com">
+                  <i class="fab fa-instagram">
+                  </i>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer">
+      <p>
+          Copyright © 2024 | HiveCheck
+      </p>
+
+  </div>
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchInput = document.getElementById("searchInput");
+      const filterCategory = document.getElementById("filterCategory");
+      const sortOptions = document.getElementById("sortOptions");
+      const cardsContainer = document.getElementById("cardsContainer");
+
+      // Search Functionality
+      searchInput.addEventListener("input", () => {
+        const searchValue = searchInput.value.toLowerCase();
+        const cards = document.querySelectorAll(".card3");
+
+        cards.forEach(card => {
+          const cardText = card.textContent.toLowerCase();
+          card.style.display = cardText.includes(searchValue) ? "block" : "none";
+        });
+      });
+
+      // Filter Functionality
+      filterCategory.addEventListener("change", () => {
+        const category = filterCategory.value;
+        const cards = document.querySelectorAll(".card3");
+
+        cards.forEach(card => {
+          card.style.display =
+            category === "all" || card.dataset.category === category ? "block" : "none";
+        });
+      });
+
+      // Sorting Functionality
+      sortOptions.addEventListener("change", () => {
+        const sortValue = sortOptions.value;
+        const cards = Array.from(cardsContainer.children);
+
+        if (sortValue === "date") {
+          cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        } else if (sortValue === "title") {
+          cards.sort((a, b) => a.dataset.title.localeCompare(b.dataset.title));
+        }
+
+        cards.forEach(card => cardsContainer.appendChild(card));
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

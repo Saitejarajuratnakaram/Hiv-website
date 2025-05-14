@@ -1,0 +1,379 @@
+<html>
+<head>
+    <title>Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html" style="text-decoration: none; color:black ; ">
+                <h2 style="margin-left: 24px; font-size: 30px;">HiveCheck</h2>
+              </a>
+              
+            
+            <ul>
+                
+                <li id="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                </li>
+                <li id="hospitalVisit">
+                    <i class="fas fa-hospital"></i>Hospital Visit
+                </li>
+                <li id="prescription">
+                    <i class="fas fa-prescription-bottle-alt"></i>Prescription
+                </li>
+                <li id="healthReport">
+                    <i class="fas fa-file-medical-alt"></i>Health Report
+                </li>
+                     <!-- lab reports -->
+                <li id="labResultItem">
+                    <i class="fas fa-vials"></i> Laboratory Result
+                </li>
+                 <!-- session notes and counseling plans -->
+                 <li id="sessionNotesItem">
+                    <i class="fas fa-notes-medical"></i> Session Notes and Counseling Plans
+                </li>
+               
+            </ul>
+        </div>
+
+        <div class="main-content">
+             
+            <div class="header">
+                <button  onclick="window.location.href='subpage.html'">Make an Appointment</button>
+                <div class="user-info" >
+                    <div class="user-info">
+                        <button id="profileIcon" class="profile-icon" style="font-size: 25px; color: #009688; background-color: transparent;">
+                            <i class="fas fa-user"></i> <!-- Profile Icon -->
+                        </button>
+                    </div>
+                    
+                    
+                    <!-- User Details Modal -->
+                    <div id="userModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>User Profile</h2>
+                    
+                            <!-- User Details Form -->
+                            <form id="userDetailsForm">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="mobile">Mobile Number:</label>
+                                <input type="tel" id="mobile" name="mobile" required>
+                                
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="address" required></textarea>
+                                
+                                <div class="form-actions">
+                                    <button type="submit">Save</button>
+                                    <button type="button" id="deleteButton">Delete</button>
+                                    <button type="button" id="cancelButton">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                </div>
+              
+            </div>
+
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Access Your Records</h3>
+                    <!-- Session Notes Section -->
+                    <div class="number" style="margin-top: 20px;">
+                        <button id="session-notes-btn" class="access-btn">Session Notes</button>
+                    </div>
+                    <br>
+                    <div>Review detailed session notes for your records.</div>
+                    
+                    <!-- Counseling Plans Section -->
+                    <div class="number" style="margin-top: 20px;">
+                        <button id="counseling-plans-btn" class="access-btn">Counseling Plans</button>
+                    </div>
+                    <br>
+                    <div>Explore personalized counseling plans for guidance.</div>
+                </div>
+                
+             <!-- Modal for Session Notes -->
+<div id="session-notes-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-session-notes">&times;</span>
+        <h3>Session Notes</h3>
+        <p>Here are your detailed session notes:</p>
+        <ul>
+            <li>Session 1: Note details...</li>
+            <li>Session 2: Note details...</li>
+            <li>Session 3: Note details...</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal for Counseling Plans -->
+<div id="counseling-plans-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-counseling-plans">&times;</span>
+        <h3>Counseling Plans</h3>
+        
+        <p>Explore your personalized counseling plans:</p>
+        <ul>
+            <li>Plan A: Description...</li>
+            <li>Plan B: Description...</li>
+        </ul>
+    </div>
+</div>
+                <div class="card">
+                    <h3> Appointment Historys </h3>
+                    <ul class="list" style="margin-top: 20px;">
+                        <li>
+                            <img src="dash1.jpg" alt="Profile picture of Roknuzzaman Ruku" width="40" height="40"/>
+                            <div class="name">
+                                <div>Roknuzzaman Ruku</div>
+                                <div>Jul 14, 2018</div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <img src="dash2.jpg" alt="Profile picture of Saifur Rahman Rana" width="40" height="40"/>
+                            <div class="name">
+                                <div>Saifur Rahman Rana</div>
+                                <div>Jul 14, 2018</div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <img src="dash3.jpg" alt="Profile picture of Subash Chandra Das" width="40" height="40"/>
+                            <div class="name">
+                                <div>Subash Chandra Das</div>
+                                <div>Jul 14, 2018</div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Upcoming Appointments</h3>
+                    <ul class="list">
+                        <li>Dr. Adams - Cardiology Consultation on Nov 24th at 2:00 PM</li>
+                        <li>Dr. Brown - Endoscopy Procedure on Nov 25th at 10:30 AM</li>
+                        <li>Dr. Chen - Gastroenterology Follow-up on Nov 26th at 1:00 PM</li>
+                        <li>Dr. Davis - Neurosurgery Pre-op Consultation on Nov 27th at 9:00 AM</li>
+                    </ul>
+                    
+                </div>
+                <div class="card">
+                    <h3>Active Doctor </h3>
+                    <ul class="list">
+                        <li>
+                            <div class="name">
+                                <div>Subash Chandra Das</div>
+                                <div class="dot active"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">
+                                <div>MD. Saifur Rahman Rana</div>
+                                <div class="dot"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">
+                                <div>Roknuzzaman Ruku</div>
+                                <div class="dot active"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="name">
+                                <div>MD. Fahim Reza</div>
+                                <div class="dot"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>Notifications </h2>
+                    <ul class="notifications">
+                        <li>
+                            <div class="text"> <b>Upcoming Appointment:  </b> You have an appointment scheduled with Dr. Smith tomorrow at 10:00 AM.</div>
+                            <div class="time">2 hours ago</div>
+                        </li>
+                        <li>
+                            <div class="text"><b>New Resource Added:</b> Check out our latest guide on stress management techniques in the Resources section.</div>
+                            <div class="time">6 hours ago</div>
+                        </li>
+                        <li>
+                            <div class="text"><b>Practice Update:</b> Our clinic will be closed for maintenance on November 25th. Please plan accordingly.</div>
+                            <div class="time">1 day ago</div>
+                        </li>
+                        <li>
+                            <div class="text"><b>New Resource:</b> Explore our new video series on mindfulness meditation practices!</div>
+                            <div class="time">2 days ago</div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="card">
+                    <h3 id="monthYear"></h3>
+                    <div class="calendar">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>T</th>
+                                    <th>W</th>
+                                    <th>T</th>
+                                    <th>F</th>
+                                    <th>S</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendar-body">
+                                <!-- Calendar days will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="hospital-details card">
+                <h3>Hospital Visit Details</h3>
+                <p>Location: <span id="hospitalLocation">123 Main St, Anytown, USA</span></p>
+                <p>Visited Dates:</p>
+                <ul id="visitedDates">
+                    <li>January 10, 2023</li>
+                    <li>February 15, 2023</li>
+                    <li>March 20, 2023</li>
+                </ul>
+                <div id="map" style="height: 300px; width: 100%;"></div>
+            </div>
+            <div class="prescription-details card">
+                <h3>Prescription Details</h3>
+                <p>Medicine to prevent HIV:</p>
+                <ul>
+                    <li>Truvada</li>
+                    <li>Descovy</li>
+                </ul>
+                <p>Precautions to prevent HIV:</p>
+                <ul>
+                    <li>Use condoms consistently and correctly.</li>
+                    <li>Limit the number of sexual partners.</li>
+                    <li>Get tested and know your partner's HIV status.</li>
+                    <li>Do not share needles or syringes.</li>
+                </ul>
+                <p>Other details related to prescriptions:</p>
+                <ul>
+                    <li>Regular follow-up with healthcare provider.</li>
+                    <li>Adherence to medication schedule.</li>
+                    <li>Monitoring for side effects.</li>
+                </ul>
+            </div>
+            <div class="health-report-details card">
+                <h3>Health Report Details</h3>
+                <ul>
+                    <li>Blood Pressure: 120/80 mmHg</li>
+                    <li>Cholesterol: 190 mg/dL</li>
+                    <li>Blood Sugar: 90 mg/dL</li>
+                    <li>Weight: 70 kg</li>
+                    <li>Height: 175 cm</li>
+                    <li>Body Mass Index (BMI): 22.9</li>
+                    <li>Heart Rate: 72 bpm</li>
+                    <li>Respiratory Rate: 16 breaths/min</li>
+                </ul>
+                
+            </div>
+             <!-- Lab Reports Section -->
+ <div id="labReportsSection" class="card">
+    <h3>Lab Reports</h3>
+    <ul>
+        <li>Blood Test: Normal</li>
+        <li>Urine Test: Normal</li>
+        <li>X-ray: No issues</li>
+    </ul>
+</div>
+
+
+ <!-- Session Notes and Counseling Plans Section -->
+ <div id="sessionNotesSection" class="card">
+    <h3>Session Notes and Counseling Plans</h3>
+    <ul>
+        <li>Session Date: July 14, 2024</li>
+        <li>Counselor: Dr. John Doe</li>
+        <li>Session Focus: Stress Management</li>
+        <li>Action Plan: 
+            <ul>
+                <li>Daily meditation practice</li>
+                <li>Exercise routine: 30 minutes of walking</li>
+                <li>Follow-up in 2 weeks</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+        </div>
+    </div>
+   
+
+ 
+    <script async defer src="https://maps.app.goo.gl/HjCnd6uSr3BZJW4y5"></script>
+    <script src="dash.js"></script>
+
+
+
+    <!-- JavaScript for Modal Functionality -->
+<script>
+    const sessionNotesBtn = document.getElementById('session-notes-btn');
+    const counselingPlansBtn = document.getElementById('counseling-plans-btn');
+    const sessionNotesModal = document.getElementById('session-notes-modal');
+    const counselingPlansModal = document.getElementById('counseling-plans-modal');
+    const closeSessionNotes = document.getElementById('close-session-notes');
+    const closeCounselingPlans = document.getElementById('close-counseling-plans');
+    
+    // Open Session Notes Modal
+    sessionNotesBtn.addEventListener('click', () => {
+        sessionNotesModal.style.display = 'block';
+    });
+    
+    // Open Counseling Plans Modal
+    counselingPlansBtn.addEventListener('click', () => {
+        counselingPlansModal.style.display = 'block';
+    });
+    
+    // Close Session Notes Modal
+    closeSessionNotes.addEventListener('click', () => {
+        sessionNotesModal.style.display = 'none';
+    });
+    
+    // Close Counseling Plans Modal
+    closeCounselingPlans.addEventListener('click', () => {
+        counselingPlansModal.style.display = 'none';
+    });
+
+    // Close Modal When Clicking Outside
+    window.addEventListener('click', (event) => {
+        if (event.target === sessionNotesModal) {
+            sessionNotesModal.style.display = 'none';
+        }
+        if (event.target === counselingPlansModal) {
+            counselingPlansModal.style.display = 'none';
+        }
+    });
+
+
+    document.getElementById('appointmentButton').addEventListener('click', function() {
+        window.location.href = 'appointment.html';
+    });
+    </script>
+
+  
+
+
+</body>
+</html>

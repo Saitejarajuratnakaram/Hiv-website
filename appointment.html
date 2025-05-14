@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Health Center
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="h&f.css" rel="stylesheet">
+    <style>
+        body {
+          
+            background-image: url('app.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100px;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            color: #fff;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .h13 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #f0ad4e;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border: 2px solid #f0ad4e;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #f0ad4e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #d6893c;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+        }
+
+
+
+        .popup h2 {
+            margin-bottom: 20px;
+        }
+
+        .popup button {
+            background-color: #f0ad4e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #d6893c;
+        }
+
+        /* pricing style */
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 260px;
+        }
+
+        .card-header {
+            padding: 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .standard {
+            background-color: #e74c3c;
+        }
+
+        .popular {
+            background-color: #3498db;
+        }
+
+        .golden {
+            background-color: #2ecc71;
+        }
+
+        .professional {
+            background-color: #f39c12;
+        }
+
+        .card-header .price {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .features {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .features .li1 {
+            font-size: 16px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark {
+            color: green;
+            margin-right: 8px;
+        }
+
+        .cross {
+            color: red;
+            margin-right: 8px;
+        }
+
+        .btn4 {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn4.standard {
+            background-color: #e74c3c;
+        }
+
+        .btn4.popular {
+            background-color: #3498db;
+        }
+
+        .btn4.golden {
+            background-color: #2ecc71;
+        }
+
+        .btn4.professional {
+            background-color: #f39c12;
+        }
+
+        .btn4:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+                <img alt="HIV Awareness Logo" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="40" /></a>
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+    </div>
+    <!-- header end  -->
+
+    <div class="form-container">
+        <h1 class="h13">Doctor Appointment Form</h1>
+        <form id="appointment-form">
+            <!-- Existing Fields -->
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Mail@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="text" id="phone" placeholder="10-digit phone number" required maxlength="10">
+            </div>
+            <div class="form-group">
+                <label>Best Time To Call You *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="call-time" value="Morning" required> Morning</label>
+                    <label><input type="radio" name="call-time" value="Afternoon"> Afternoon</label>
+                    <label><input type="radio" name="call-time" value="Evening"> Evening</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>I Would Like To (Choose One) *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="appointment-type" value="New Patient Appointment"
+                            required>Casual</label>
+                    <label><input type="radio" name="appointment-type" value="Routine Checkup">Checkup</label>
+                    <label><input type="radio" name="appointment-type" value="Comprehensive Health Exam">Health</label>
+                </div>
+            </div>
+
+            <!-- New Fields -->
+            <div class="form-group">
+                <label for="professional">Select Healthcare Professional *</label>
+                <select id="professional" required>
+                    <option value="" disabled selected>Choose a professional</option>
+                    <option value="Dr. John Smith">Dr. John Smith</option>
+                    <option value="Dr. Emily Brown">Dr. Emily Brown</option>
+                    <option value="Dr. Michael Davis">Dr. Michael Davis</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="service">Select Service Type *</label>
+                <select id="service" required>
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="General Consultation">General Consultation</option>
+                    <option value="Specialized Treatment">Specialized Treatment</option>
+                    <option value="Follow-up Appointment">Follow-up Appointment</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Select Date *</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Select Time *</label>
+                <select id="time" required>
+                    <option value="" disabled selected>Choose a time slot</option>
+                    <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                    <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                    <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                    <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <h2>Appointment Booked Successfully!</h2>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="pricing-table">
+        <!-- Standard Plan -->
+        <div class="pricing-card">
+            <div class="card-header standard">
+                <h3>STANDARD</h3>
+                <p><span class="price">₹ 799</span>/month</p>
+            </div>
+            <ul class="features">
+                <li class="li1"><span class="checkmark">✔</span> Checkup</li>
+                <li class="li1"><span class="cross">✘</span> Overview</li>
+                <li class="li1"><span class="cross">✘</span> Personal Checkup</li>
+                <li class="li1"><span class="cross">✘</span> Consulting </li>
+                <li class="li1"><span class="cross">✘</span>Meeting</li>
+            </ul>
+            <button class="btn4 standard">Buy Now</button>
+        </div>
+
+        <!-- Popular Plan -->
+        <div class="pricing-card">
+            <div class="card-header popular">
+                <h3>POPULAR</h3>
+                <p><span class="price">₹ 1599 </span>/month</p>
+            </div>
+            <ul class="features">
+                <li class="li1"><span class="checkmark">✔</span> Checkup</li>
+                <li class="li1"><span class="checkmark">✔</span> Personal Checkup</li>
+                <li class="li1"><span class="cross">✘</span> Overview</li>
+                <li class="li1"><span class="cross">✘</span> Consulting</li>
+                <li class="li1"><span class="cross">✘</span> Meeting</li>
+            </ul>
+            <button class="btn4 popular">Buy Now</button>
+        </div>
+
+        <!-- Golden Plan -->
+        <div class="pricing-card">
+            <div class="card-header golden">
+                <h3>GOLDEN</h3>
+                <p><span class="price">₹ 2359</span>/month</p>
+            </div>
+            <ul class="features">
+                <li class="li1"><span class="checkmark">✔</span> Checkup</li>
+                <li class="li1"><span class="checkmark">✔</span> Personal Checkup</li>
+                <li class="li1"><span class="checkmark">✔</span> Meeting</li>
+                <li class="li1"><span class="checkmark">✔</span> Consulting</li>
+                <li class="li1"><span class="cross">✘</span> Overview</li>
+            </ul>
+            <button class="btn4 golden">Buy Now</button>
+        </div>
+
+        <!-- Professional Plan -->
+        <div class="pricing-card">
+            <div class="card-header professional">
+                <h3>PROFESSIONAL</h3>
+                <p><span class="price">₹ 5499</span>/month</p>
+            </div>
+            <ul class="features">
+                <li class="li1"><span class="checkmark">✔</span> Checkup</li>
+                <li class="li1"><span class="checkmark">✔</span> Personal Checkup</li>
+                <li class="li1"><span class="checkmark">✔</span> Meeting</li>
+                <li class="li1"><span class="checkmark">✔</span> Consulting</li>
+                <li class="li1"><span class="checkmark">✔</span> Overview Treatment</li>
+            </ul>
+            <button class="btn4 professional">Buy Now</button>
+        </div>
+    </div>
+
+
+    <!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img alt="Company Logo" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                            width="100" /></a>
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("appointment-form");
+        const popup = document.getElementById("popup");
+        const nameInput = document.getElementById("name");
+        const phoneInput = document.getElementById("phone");
+
+        // Restrict invalid characters for name input
+        nameInput.addEventListener("input", () => {
+            nameInput.value = nameInput.value.replace(/[^a-zA-Z\s]/g, "");
+        });
+
+        // Restrict invalid characters for phone input
+        phoneInput.addEventListener("input", () => {
+            phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
+        });
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const phone = phoneInput.value;
+
+            // Email Validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Phone Number Validation
+            if (phone.length !== 10) {
+                alert("Phone number must be exactly 10 digits.");
+                return;
+            }
+
+            // If all validations pass
+            popup.style.display = "block";
+            form.reset();
+        });
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
+
+
+        document.getElementById('appointment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const professional = document.getElementById('professional').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+
+        });
+
+
+
+        // Add an alert when the "Buy Now" button is clicked
+        document.querySelectorAll('.btn4').forEach(button => {
+            button.addEventListener('click', () => {
+                alert("Thank you for choosing the " + button.parentElement.querySelector('.card-header h3').textContent + " plan!");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

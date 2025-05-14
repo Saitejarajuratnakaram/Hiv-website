@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Blog</title>
+    <link rel="stylesheet" href="h&f.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<style>
+   
+    .container1 {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Blog Post Styles */
+    .blog-container {
+        display: flex;
+        gap: 40px;
+    }
+
+    .main-content2 {
+        flex: 3;
+        background-color: #ffffff;
+        padding: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post {
+        margin-bottom: 40px;
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .blog-post .date-category {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .blog-post h2 {
+        color: #d9534f;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .blog-post p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .quote {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #d9534f;
+        font-style: italic;
+        color: #555;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+        flex: 1;
+        padding: 30px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .widget {
+        margin-bottom: 40px;
+    }
+
+    .widget h3 {
+        color: #d9534f;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .categories1,
+    .tags {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .categories1 .li1,
+    .tags li {
+        margin-bottom: 10px;
+    }
+
+    .categories1 .li1 a,
+    .tags li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .categories1 .li1 a:hover,
+    .tags li a:hover {
+        color: #d9534f;
+    }
+
+    .tag {
+        display: inline-block;
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #555;
+        margin: 5px 5px 5px 0;
+        transition: background-color 0.3s;
+    }
+
+    .tag:hover {
+        background-color: #d9534f;
+        color: white;
+    }
+
+  
+
+    /* Latest Posts Widget Styles */
+    .latest-posts .ul1 {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .latest-posts .li2 {
+        margin-bottom: 10px;
+    }
+
+    .latest-posts a {
+        text-decoration: none;
+        color: #555;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .latest-posts a:hover {
+        color: #d9534f;
+    }
+
+    /* News Widget Styles */
+    .news-widget {
+        margin-bottom: 40px;
+    }
+
+    .news-widget h3 {
+        color: #d9534f;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .news-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .news-item:hover {
+        background-color: #f0f0f0;
+    }
+
+    .news-item img {
+        width: 120px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .news-item img:hover {
+        transform: scale(1.05);
+    }
+
+    .news-item .news-content {
+        flex: 1;
+    }
+
+    .news-item .news-content h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .news-item .news-content h4:hover {
+        color: #d9534f;
+    }
+
+    .news-item .news-content p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+
+    /* Featured Articles and Related Posts Styles */
+    .articles-widget,
+    .related-posts-widget {
+        margin-bottom: 40px;
+    }
+
+    .articles-widget h3,
+    .related-posts-widget h3 {
+        color: #d9534f;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .article-item,
+    .related-post-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .article-item:hover,
+    .related-post-item:hover {
+        background-color: #f0f0f0;
+    }
+
+    .article-item img,
+    .related-post-item img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .article-item img:hover,
+    .related-post-item img:hover {
+        transform: scale(1.05);
+    }
+
+    .article-content h4,
+    .related-post-content h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+        color: #555;
+        transition: color 0.3s;
+    }
+
+    .article-content h4:hover,
+    .related-post-content h4:hover {
+        color: #d9534f;
+    }
+
+    .article-content p,
+    .related-post-content p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+
+    /* Container styling */
+    .container3 {
+        max-width: 800px;
+        /* Adjust the width as needed */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Comments Section Styling */
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    .comment-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    /* Textarea styling */
+    #commentText {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+        /* Prevent resizing */
+    }
+
+    /* Submit button styling */
+    .comment-form button {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 20px;
+        background-color: #5e5c5d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .comment-form button:hover {
+        background-color: #0056b3;
+    }
+
+
+    /* Social Media Links Styling */
+    .social-media-icons {
+        display: flex;
+        flex-direction: column;
+        /* Stack vertically */
+        gap: 15px;
+        /* Space between each block */
+        align-items: flex-start;
+        /* Align items to the left */
+    }
+
+    .social-media-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between icon and text */
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 40px;
+        color: #333;
+        /* Icon color */
+        font-size: 20px;
+        /* Icon size */
+    }
+
+    .social-icon span {
+        font-size: 16px;
+        /* Text size */
+        margin-left: 40px;
+        color: #333;
+        /* Text color */
+    }
+
+    .social-icon:hover {
+        color: #d9534f;
+        /* Hover effect color */
+    }
+
+    .social-icon i {
+        font-size: 24px;
+        /* Icon size */
+    }
+
+
+    .banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    background: url('p13.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-content {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3.3rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+   
+</style>
+
+<body>
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+                <img alt="HIV Awareness Logo" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="40" /></a>
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+    </div>
+    <!-- header end  -->
+
+    <div class="banner">
+        <div class="overlay">
+            <div class="blog-content">
+                <h1> Blog</h1>
+               
+            </div>
+        </div>
+    </div>
+      
+
+
+    <div class="container1">
+        <!-- Blog Container -->
+        <div class="blog-container">
+            <!-- Main Blog Content -->
+            <div class="main-content2">
+                <!-- Blog Post 1 -->
+                <div class="blog-post">
+                    <img src="p1.jpg" alt="HIV Awareness">
+                    <div class="date-category">
+                        <span>November 22, 2024</span> | <span>Lifestyle</span>
+                    </div>
+                    <h2>Understanding HIV Awareness</h2>
+                    <p>HIV is a virus that attacks the immune system, and can lead to AIDS if left untreated. HIV is spread through contact with blood or bodily fluids, such as during sex without a condom or by sharing needles</p>
+                    <blockquote class="quote">
+                        "HIV awareness is crucial for early detection and prevention."
+                    </blockquote>
+                    <p>Antiretroviral therapy (ART) is a combination of HIV medicines that can reduce the amount of HIV in the blood. People with HIV who take ART as prescribed can live long and healthy lives, and can't transmit HIV to their partners</p>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-post">
+                    <img src="p2.jpg" alt="HIV Prevention">
+                    <div class="date-category">
+                        <span>October 18, 2024</span> | <span>Health Tips</span>
+                    </div>
+                    <h2>Top 10 HIV Prevention Strategies</h2>
+                    <blockquote class="quote">
+                    <p>HIV targets the body's white blood cells, weakening the immune system. This makes it easier to get sick with diseases like tuberculosis, infections and some cancers. HIV is spread from the body fluids of an infected person, including blood, breast milk, semen and vaginal fluids</p>
+                        "Prevention is the key to a future free from HIV."
+                    </blockquote>
+                    <p>There is currently no vaccine available that will prevent HIV infection. However, scientists around the world, with support from the National Institutes of Health (NIH), are working to develop one. Some of the areas being studied include</p>
+                   </div>
+                <!-- Blog Post 3 -->
+                <div class="blog-post">
+                    <img src="p3.jpg" alt="Living with HIV">
+                    <div class="date-category">
+                        <span>November 5, 2024</span> | <span>Patient Stories</span>
+                    </div>
+                    <h2>Living with HIV: Personal Experiences and Support</h2>
+                    <p>Living with HIV can increase the likelihood of stress, anxiety, and depression. In addition, some opportunistic infections can affect the nervous system, resulting in changes in behavior and thinking. Anyone concerned about their mental or emotional health should contact a healthcare professional</p>
+                    <blockquote class="quote">
+                        "Living with HIV requires a supportive community and access to the right resources."
+                    </blockquote>
+                    <p>There is no cure for HIV, but HIV treatment can reduce the amount of HIV in your body. There are two types of HIV treatment: pills and shots. Most people can get HIV under control within six months. HIV treatment prevents transmission to others and helps you stay healthy</p>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="blog-post">
+                    <img src="p4.jpg" alt="Practice Updates">
+                    <div class="date-category">
+                        <span>October 30, 2024</span> | <span>Practice Updates</span>
+                    </div>
+                    <h2>Practice Updates: Enhancing Our HIV Care Services</h2>
+                    <p>How do you get HIV from semen or vaginal fluid? Body fluids including semen and vaginal secretions can contain HIV. If a person has HIV and a detectable viral load, HIV can passed on to someone if their semen or vaginal secretions get into the body of a sexual partner during vaginal</p>
+                    <blockquote class="quote">
+                        "We are dedicated to continuous improvement in HIV care for all our patients."
+                    </blockquote>
+                    <p>you must swab your gums to collect an oral fluid sample and then test your sample. Your results will be ready within 20 minutes. If you don't follow the directions as described, the test may not work. There is a phone number included with the HIV self-test if you need help using the test</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+               
+
+                <!-- Categories Widget -->
+                <div class="widget">
+                    <h3>Categories</h3>
+                    <ul class="categories1">
+                        <li class="li1"><a>HIV Awareness</a></li>
+                        <li class="li1"><a>Prevention Strategies</a></li>
+                        <li class="li1"><a>Living with HIV</a></li>
+                        <li class="li1"><a>Practice Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Latest Posts Widget -->
+                <div class="widget latest-posts">
+                    <h3>Latest Posts</h3>
+                    <ul class="ul1">
+                        <li class="li2"><a>Understanding HIV Awareness</a></li>
+                        <li class="li2"><a>Top 10 HIV Prevention Strategies</a></li>
+                        <li class="li2"><a>Living with HIV: Personal Experiences</a></li>
+                        <li class="li2"><a>Enhancing Our HIV Care Services</a></li>
+                        <li class="li2"><a>the standing HIV Awareness</a></li>
+                        <li class="li2"><a> HIV Prevention Strategies</a></li>
+                        <li class="li2"><a> HIv Personal Experiences</a></li>
+                        <li class="li2"><a> Our HIV Care Services</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- News Widget -->
+                <div class="widget news-widget">
+                    <h3>News</h3>
+                    <div class="news-item">
+                        <img src="p6.jpg" alt="News 1">
+                        <div class="news-content">
+                            <h4><a>Latest HIV </a></h4>
+                            <p>Researchers have made significant HIV transmission.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="p7.jpg" alt="News 2">
+                        <div class="news-content">
+                            <h4><a>Community Support </a></h4>
+                            <p> local aim people living with HIV.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="p8.jpg" alt="News 3">
+                        <div class="news-content">
+                            <h4><a> Health Events</a></h4>
+                            <p>Join the and care strategies.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="s1.jpg" alt="News 3">
+                        <div class="news-content">
+                            <h4><a> Health tips</a></h4>
+                            <p>Join the and care strategies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Articles Widget -->
+                <div class="widget articles-widget">
+                    <h3>Featured Articles</h3>
+                    <div class="article-item">
+                        <img src="p9.jpg" alt="Article 1">
+                        <div class="article-content">
+                            <h4><a> Treatment</a></h4>
+                            <p>An treatment options for HIV patients.</p>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <img src="p10.jpg" alt="Article 2">
+                        <div class="article-content">
+                            <h4><a> About HIV</a></h4>
+                            <p>Learn the best resources and HIV information.</p>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <img src="h36.jpg" alt="Article 2">
+                        <div class="article-content">
+                            <h4><a> life of HIV</a></h4>
+                            <p>Learn the best resources and HIV information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Posts Widget -->
+                <div class="widget related-posts-widget">
+                    <h3>Related Posts</h3>
+                    <div class="related-post-item">
+                        <img src="p11.jpg" alt="Related Post 1">
+                        <div class="related-post-content">
+                            <h4><a>HIV Medication</a></h4>
+                            <p>Understanding of HIV treatment.</p>
+                        </div>
+                    </div>
+                    <div class="related-post-item">
+                        <img src="p12.jpg" alt="Related Post 2">
+                        <div class="related-post-content">
+                            <h4><a> Healthy Diet</a></h4>
+                            <p>Tips for maintaining while living with HIV.</p>
+                        </div>
+                    </div>
+                    <div class="related-post-item">
+                        <img src="h34.jpg" alt="Related Post 2">
+                        <div class="related-post-content">
+                            <h4><a> Healthy life</a></h4>
+                            <p>Tips for maintaining while living with HIV.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Tags Widget -->
+                <div class="widget">
+                    <h3>Tags</h3>
+                    <div class="tags">
+                        <span class="tag"><a>Health</a></span>
+                        <span class="tag"><a>Awareness</a></span>
+                        <span class="tag"><a>Prevention</a></span>
+                        <span class="tag"><a>Support</a></span>
+                        <span class="tag"><a>Care</a></span>
+                        <span class="tag"><a>Community</a></span>
+                        <span class="tag"><a>Updates</a></span>
+                    </div>
+                </div>
+
+
+                <!-- New Blog post -->
+                <div class="widget news-widget">
+                    <h3>Blog posts</h3>
+                    <div class="news-item">
+                        <img src="p1.jpg" alt="News 1">
+                        <div class="news-content">
+                            <h4><a> HIV Awareness </a></h4>
+                            <p>Researchers have made significant HIV transmission.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="p2.jpg" alt="News 2">
+                        <div class="news-content">
+                            <h4><a>HIV Prevention </a></h4>
+                            <p> local aim people living with HIV.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="p3.jpg" alt="News 3">
+                        <div class="news-content">
+                            <h4><a> HIV Experiences </a></h4>
+                            <p>Join the and care strategies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container3">
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <form class="comment-form" id="commentForm">
+                            <textarea id="commentText" placeholder="Leave your comment here..." required
+                                rows="2"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+
+                        <ul class="comments-list" id="commentsList">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media Links Widget -->
+                <div class="widget social-media-widget">
+                    <h3>Follow Us</h3>
+                    <div class="social-media-icons">
+                        <div class="social-media-item">
+                            <a href="https://www.facebook.com" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                        <div class="social-media-item">
+                            <a href="https://www.x.com" class="social-icon" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                        <div class="social-media-item">
+                            <a href="https://www.instagram.com" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                        <div class="social-media-item">
+                            <a href="https://www.linkedin.com" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                        <div class="social-media-item">
+                            <a href="https://www.YouTube.com" class="social-icon" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </aside>
+        </div>
+    </div><br><br>
+
+    <!-- footer start -->
+   <!-- footer start -->
+   <div class="main-container">
+    <div class="containeress">
+        <div class="section logo-section">
+            <div class="logo-container">
+                <img alt="Company Logo" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="100" />
+                <h1>
+                    HiveCheck
+                </h1>
+            </div>
+            <p>
+                Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                ensure your well-being.
+            </p>
+        </div>
+        <div class="section contact-info">
+            <h2>
+                <a href="contact.html" style="text-decoration: none; color: inherit;">
+                    Contact Info
+                </a>
+            </h2>
+            <p>
+                "Reach out to us for more information about our services and offerings."
+            </p>
+            <div class="icon-text">
+                <i class="fas fa-phone-alt">
+                </i>
+                <span>
+                    +91 9876543210
+                </span>
+            </div>
+            <div class="icon-text">
+                <i class="fas fa-envelope">
+                </i>
+                <span>
+                    HiveCheck@gmail.com
+                </span>
+            </div>
+        </div>
+        <div class="section latest-news">
+            <h2>
+                Quick Links
+            </h2>
+            <div class="quick-links">
+                <ul>
+                    <li class="quick-link-item">
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+                    <li class="quick-link-item">
+                        <a href="about.html">
+                            About us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section opening-hours">
+            <h2>
+                Opening Hours
+            </h2>
+            <p>
+                Monday - Friday 06:00 AM - 10:00 PM
+            </p>
+            <p>
+                Saturday 09:00 AM - 08:00 PM
+            </p>
+            <p>
+                Sunday Closed
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a href="https://www.linkedIn.com">
+                    <i class="fab fa-linkedin">
+                    </i>
+                </a>
+                <a href="https://www.twitter.com">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a href="https://www.instagram.com">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © 2024 | HiveCheck
+        </p>
+
+    </div>
+</div>
+
+
+
+    <script>
+        // Get elements
+        const commentForm = document.getElementById('commentForm');
+        const commentText = document.getElementById('commentText');
+        const commentsList = document.getElementById('commentsList');
+
+        // Add event listener to the form
+        commentForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get the comment text
+            const comment = commentText.value;
+
+            // Create a new comment element
+            const newComment = document.createElement('li');
+            newComment.classList.add('comment-item');
+            newComment.innerHTML = `<p>${comment}</p>`;
+
+            // Add the new comment to the list
+            commentsList.appendChild(newComment);
+
+            // Clear the textarea
+            commentText.value = '';
+        });
+    </script>
+</body>
+
+</html>

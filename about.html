@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <title>
+                HiveCheck
+            </title>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+            <link href="h&f.css" rel="stylesheet">
+                <!-- Customized Bootstrap Stylesheet -->
+                <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+                <!-- Template Stylesheet -->
+                <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* General card styling */
+        .achievement-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+        }
+        
+        .achievement-card:hover {
+            transform: scale(1.1); /* Zoom in the card */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+        
+        /* Optional: Enhance the hover effect by increasing the zoom effect */
+        .achievement-card .icon-container {
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover .icon-container {
+            transform: scale(1.2); /* Zoom in the icon inside the card */
+        }
+        
+        /* Optional: Add a hover effect to text */
+        .achievement-card h5:hover {
+            color: #007bff; /* Change the title color on hover */
+        }
+        
+        
+        /* Timeline start */
+        * {
+            box-sizing: border-box;
+        }
+        
+        .Time {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #009688;
+        }
+        
+        /* Timeline Container */
+        .timeline-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        /* Timeline Title */
+        .timeline-container h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #009688;
+        }
+        
+        /* Timeline Layout */
+        .timeline {
+            position: relative;
+            padding: 10px 0;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* Timeline Line (Vertical Center Line) */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #009688;
+            transform: translateX(-50%);
+        }
+        
+        /* Timeline Items */
+        .timeline-item {
+            position: relative;
+            width: 45%;
+            padding: 10px;
+            margin: 20px 0;
+            display: inline-block;
+            vertical-align: top;
+            transition: background-color 0.3s ease;
+        }
+        
+        .timeline-item.left {
+            left: 0;
+        }
+        
+        .timeline-item.right {
+            left: 10%;
+        }
+        
+        /* Content */
+        .content {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(45, 44, 44, 0.1);
+            position: relative;
+        }
+        
+        .timeline-item.left .content {
+            margin-left: 20px;
+        }
+        
+        .timeline-item.right .content {
+            margin-right: 5px;
+        }
+        
+        /* Circle */
+        .circle {
+            position: absolute;
+            top: 20px;
+            left: -40px;
+            background-color: #009688;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            z-index: 1;
+        }
+        
+        /* Hover Effect */
+        .timeline-item:hover .content {
+            background-color: #8bc34a;
+        }
+        
+        /* Year Heading */
+        h2 {
+            margin: 10px;
+            color: #000000;
+            font-size: 24px;
+        }
+        
+        /* Paragraph */
+        p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        /* Timeline End */
+        .header8 {
+                    /* background-color: #672B83; */
+                    background-image: url(about1.jpg);
+                    color: rgb(251, 250, 250);
+                    width: 100%;
+                    height: 400px;
+                    padding: 60px 0;
+                    text-align: center;
+                    background-size: cover;
+                }
+        
+                .header8 h1 {
+                    font-size: 2.8rem;
+                    margin-top: 60px;
+                }
+        
+        </style>
+        </head>
+        
+        
+        <body>
+            <div class="header-unique">
+                <div class="welcome-text-unique">
+                    Welcome to a Professional HiveCheck
+                </div>
+                <div class="contact-info-unique">
+                    <div>
+                        <i class="fas fa-phone-alt"></i> +91 9876543210
+                    </div>
+                    <div>
+                        <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-bar-unique">
+                <div class="nav-bar-logo-unique">
+                    <img alt="HIV Awareness Logo" height="40" src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg" width="40" />
+                    <h1> HiveCheck </h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Doctors</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="resource.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+                <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+                    <i class="fas fa-user"></i> <!-- Profile icon -->
+                </a>
+        
+            </div>
+            <!-- header end  -->
+        
+        
+        
+        
+            <!-- Header Section -->
+            <header class="header8">
+                <div class="container9">
+                    <h1 style="color: #fff;">About</h1>
+                    
+                </div>
+            </header>
+        
+         <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="d-flex flex-column">
+                            <img class="img-fluid rounded w-75 align-self-end" src="about-1.jpg" alt="HIV Testing">
+                            <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="about-2.jpg" alt="HIV Awareness" style="margin-top: -25%;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">About Us</p>
+                        <h1 class="mb-4">Why You Should Trust Us? Learn About HIV Testing!</h1>
+                        <p>We provide confidential, accurate, and fast HIV testing services to ensure your health and peace of mind. Our tests are simple and reliable, offering you results you can trust.</p>
+                        <p class="mb-4">Our team of qualified professionals is here to guide you through the testing process, offering support and counseling along the way. Trust us for a compassionate and discreet service.</p>
+                        <p><i class="far fa-check-circle text-primary me-3"></i>Confidential HIV Testing</p>
+                        <p><i class="far fa-check-circle text-primary me-3"></i>Experienced Health Professionals</p>
+                        <p><i class="far fa-check-circle text-primary me-3"></i>Post-test Counseling and Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        <!-- Feature Start -->
+        <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+            <div class="container feature px-lg-0">
+                <div class="row g-0 mx-lg-0">
+                    <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="p-lg-5 ps-lg-0">
+                            <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
+                            <h1 class="text-white mb-4">Why Choose Us for HIV Testing</h1>
+                            <p class="text-white mb-4 pb-2">We offer a range of benefits for anyone seeking HIV testing. Our services are reliable, fast, and backed by medical professionals who care about your health and confidentiality.</p>
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                            <i class="fa fa-user-md text-primary"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="text-white mb-2">Experienced</p>
+                                            <h5 class="text-white mb-0">Health Professionals</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                            <i class="fa fa-check text-primary"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="text-white mb-2">Fast</p>
+                                            <h5 class="text-white mb-0">Reliable Results</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                            <i class="fa fa-comment-medical text-primary"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="text-white mb-2">Post-Test</p>
+                                            <h5 class="text-white mb-0">Counseling and Support</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                            <i class="fa fa-headphones text-primary"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <p class="text-white mb-2">24 Hours</p>
+                                            <h5 class="text-white mb-0">Support Available</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute img-fluid w-100 h-100" src="mvv.jpg" style="object-fit: cover;" alt="HIV Testing Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+        
+        <!-- Mission, Vision, Values Section -->
+        <div class="container-fluid facts my-5 py-5" style="background-image: url('feature.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="container py-5">
+                <div class="row text-white text-center">
+                    <!-- Mission Container -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="p-4 rounded" style="background-color: rgba(0, 150, 136, 0.8);">
+                            <h3 class="mb-3">Mission</h3>
+                            <p class="text-white">Our mission is to provide exceptional, patient-centered care in all areas of digestive health by staying at the forefront of medical innovation and compassion.</p>
+                        </div>
+                    </div>
+                    <!-- Vision Container -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="p-4 rounded" style="background-color: rgba(0, 150, 136, 0.8);">
+                            <h3 class="mb-3">Vision</h3>
+                            <p class="text-white">Our vision is to lead the field of gastroenterology through clinical excellence, and a commitment to improving the quality of life.</p>
+                        </div>
+                    </div>
+                    <!-- Values Container -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="p-4 rounded" style="background-color: rgba(0, 150, 136, 0.8);">
+                            <h3 class="mb-3">Values</h3>
+                            <p class="text-white">We are guided by compassion, integrity, innovation, and a relentless pursuit of excellence in every aspect of our practice. "Putting patients first in everything we do."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mission, Vision, Values End -->
+        
+        
+        
+        
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Our Team</p>
+                    <h1>Meet Our Experienced Doctors</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="team-1.jpg" alt="Doctor 1">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>Dr. John Doe</h5>
+                                <p class="text-primary">Infectious Disease Specialist</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="team-2.jpg" alt="Doctor 2">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>Dr. Jane Smith</h5>
+                                <p class="text-primary">HIV Specialist</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="team-3.jpg" alt="Doctor 3">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>Dr. Mark White</h5>
+                                <p class="text-primary">General Practitioner</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="team-4.jpg" alt="Doctor 4">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>Dr. Emily Johnson</h5>
+                                <p class="text-primary">Nurse Practitioner</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        <!-- Achievements Start -->
+        <div class="container-xxl py-5 bg-light">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Our Milestones</p>
+                    <h1>Achievements</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card achievement-card shadow border-0 rounded p-4">
+                            <div class="icon-container bg-primary text-white rounded-circle d-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h5>Awards</h5>
+                            <p>Recognized with multiple awards for exceptional service and contributions testing.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card achievement-card shadow border-0 rounded p-4">
+                            <div class="icon-container bg-success text-white rounded-circle d-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h5>Certifications</h5>
+                            <p>Certified by leading healthcare organizations to provide top-tier HIV testing and care services.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card achievement-card shadow border-0 rounded p-4">
+                            <div class="icon-container bg-warning text-white rounded-circle d-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h5>Milestones</h5>
+                            <p>Successfully completed over 20,000 HIV tests, contributing to better and prevention.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card achievement-card shadow border-0 rounded p-4">
+                            <div class="icon-container bg-info text-white rounded-circle d-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h5>Partnerships</h5>
+                            <p>Collaborated with international health organizations to expand our reach and services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Achievements End -->
+        
+        <!-- Timeline start -->
+        <p class="d-inline-block border rounded-pill py-1 px-4" style="margin-left: 570px;">Timeline</p>
+        <h1 class="Time">Our Timeline</h1>
+        <div class="timeline-container">
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2000</h2>
+                        <p>Practice Established</p>
+                        <p>Aiming to provide exceptional HIV testing services, we started with the goal of making testing accessible, reliable, and confidential for everyone.</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2005</h2>
+                        <p>Expanded Services</p>
+                        <p>We expanded our range of services to offer more HIV-related care and testing options, serving more people in need.</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2010</h2>
+                        <p>Opened New Location</p>
+                        <p>We opened a new center to provide easier access to HIV testing services, helping communities receive the care they need.</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2015</h2>
+                        <p>Introduced Advanced Testing Methods</p>
+                        <p>We incorporated new HIV testing technologies, increasing the speed and accuracy of test results.</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2020</h2>
+                        <p>Recognized for Excellence</p>
+                        <p>Our practice was recognized for providing outstanding HIV testing and counseling services in the region.</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <div class="circle"></div>
+                        <h2>2023</h2>
+                        <p>Launched Online Testing Services</p>
+                        <p>We introduced online HIV testing services, allowing people to get tested from the safety and convenience of their homes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Timeline End -->
+        
+        <br>
+        <br>
+        <br>
+        
+        <!-- footer start -->
+            <div class="main-container">
+                <div class="containeress">
+                    <div class="section logo-section">
+                        <div class="logo-container">
+                            <img alt="Company Logo" height="100"
+                                src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                                width="100" />
+                            <h1>
+                                HiveCheck
+                            </h1>
+                        </div>
+                        <p>
+                            Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                            ensure your well-being.
+                        </p>
+                    </div>
+                    <div class="section contact-info">
+                        <h2>
+                            <a href="contact.html" style="text-decoration: none; color: inherit;">
+                                Contact Info
+                            </a>
+                        </h2>
+                        <p>
+                            "Reach out to us for more information about our services and offerings."
+                        </p>
+                        <div class="icon-text">
+                            <i class="fas fa-phone-alt">
+                            </i>
+                            <span>
+                                +91 9876543210
+                            </span>
+                        </div>
+                        <div class="icon-text">
+                            <i class="fas fa-envelope">
+                            </i>
+                            <span>
+                                HiveCheck@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="section latest-news">
+                        <h2>
+                            Quick Links
+                        </h2>
+                        <div class="quick-links">
+                            <ul>
+                                <li class="quick-link-item">
+                                    <a href="faq.html">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li class="quick-link-item">
+                                    <a href="blog.html">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="quick-link-item">
+                                    <a href="contact.html">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li class="quick-link-item">
+                                    <a href="services.html">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="quick-link-item">
+                                    <a href="about.html">
+                                        About us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section opening-hours">
+                        <h2>
+                            Opening Hours
+                        </h2>
+                        <p>
+                            Monday - Friday 06:00 AM - 10:00 PM
+                        </p>
+                        <p>
+                            Saturday 09:00 AM - 08:00 PM
+                        </p>
+                        <p>
+                            Sunday Closed
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com">
+                                <i class="fab fa-facebook-f">
+                                </i>
+                            </a>
+                            <a href="https://www.linkedIn.com">
+                                <i class="fab fa-linkedin">
+                                </i>
+                            </a>
+                            <a href="https://www.twitter.com">
+                                <i class="fab fa-twitter">
+                                </i>
+                            </a>
+                            <a href="https://www.instagram.com">
+                                <i class="fab fa-instagram">
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>
+                        Copyright © 2024 | HiveCheck
+                    </p>
+        
+                </div>
+            </div>
+        </body>
+        
+</html>

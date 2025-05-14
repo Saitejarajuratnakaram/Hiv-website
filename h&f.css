@@ -1,0 +1,259 @@
+.header-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eaeaea;
+    /* background-color: #f8f8f8; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-unique {
+    display: flex;
+    align-items: center;
+}
+
+.logo-unique img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.welcome-text-unique {
+    font-size: 14px;
+    color: #666;
+    margin-left: 20px;
+}
+
+.contact-info-unique {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-unique div {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-info-unique div i {
+    color: #009688;
+    margin-right: 5px;
+}
+
+/* Styling for the navigation bar */
+.nav-bar-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky;   /* Make the navbar sticky */
+    top: 0;             /* Stick to the top of the page */
+    background-color: white; /* Ensure the background remains visible */
+    z-index: 1000;      /* Keeps it above other elements while scrolling */
+    border-top: 1px solid #eaeaea; /* Optional, adds a border above the navbar */
+}
+
+/* Styling for the navigation bar items */
+.nav-bar-unique ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 355px;
+}
+
+.nav-bar-unique ul li {
+    margin-right: 20px;
+}
+
+.nav-bar-unique ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Styling for the logo in the nav bar */
+.nav-bar-logo-unique {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-logo-unique img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-bar-logo-unique h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+/* Styling for the appointment and profile buttons */
+.appointment-btn-unique {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Ensure the sticky behavior works when content scrolls */
+body {
+    margin: 0;
+}
+
+
+
+
+/* footer styles */
+.main-container {
+    margin: 0;
+    padding: 0;
+    /* background-color: #fff; */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containeress {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+}
+.section {
+    width: 26%;
+    text-align: center;
+}
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 46px;
+}
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #333;
+    bottom: -5px;
+    left: 25%;
+}
+.contact-info p, .opening-hours p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.contact-info .icon-text, .opening-hours .icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.contact-info .icon-text i, .opening-hours .icon-text i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.latest-news .news-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.latest-news .news-item img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.latest-news .news-item .news-text {
+    display: flex;
+    flex-direction: column;
+}
+.latest-news .news-item .news-text h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.latest-news .news-item .news-text p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0 0;
+}
+.footer {
+    text-align: center;
+    padding: 0px;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+    width: 100%;
+}
+.footer p {
+    margin: 5px 0;
+    color: #777;
+}
+.footer a {
+    color: #777;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.quick-links ul {
+    list-style: none;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quick-links ul li {
+    margin: 10px 0;
+}
+.quick-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+.logo-section {
+    margin-bottom: 30px;
+    width: 30%;
+    text-align: center;
+}
+.logo-section .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-section img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.logo-section h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.logo-section p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.section.logo-section{
+    margin: 10px;
+}

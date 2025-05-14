@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiveCheck</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="h&f.css" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Profile page wrapper */
+        .profile-wrapper {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Profile header */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .profile-header .profession {
+            font-size: 1.5rem;
+            color: #777;
+        }
+
+        /* Profile card (image and details) */
+        .profile-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            gap: 30px;
+        }
+
+        /* Navbar for sections */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-left: 420px;
+        }
+
+        .navbar a {
+            font-size: 1.2rem;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ddd;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            opacity: 1;
+        }
+
+        /* Active link styling */
+        .navbar a.active {
+            font-weight: bold;
+            color: #009688;
+            /* Change color for the active link */
+        }
+
+
+        /* Profile photo */
+        .profile-photo {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #eee;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile details */
+        .profile-details {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .profile-details h2 {
+            font-size: 2rem;
+            color: #444;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f2f2f2;
+            padding-bottom: 5px;
+        }
+
+        .profile-details p,
+        .profile-details ul {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .profile-details ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .profile-details ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+         <img alt="HIV Awareness Logo" height="40" src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg" width="40" /></a>           <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+    </div>
+    <!-- header end  -->
+
+    <div class="profile-wrapper">
+        <div class="profile-header">
+            <h1>CHRIS WALKER</h1>
+            <p class="profession">Creative Leader</p>
+        </div>
+
+        <!-- Profile card (image and details) -->
+        <div class="profile-card">
+            <!-- Navbar for sections inside profile -->
+            <div class="navbar">
+                <a href="javascript:void(0);" onclick="showSection('biography')">Biography</a>
+                <a href="javascript:void(0);" onclick="showSection('qualifications')">Qualifications</a>
+                <a href="javascript:void(0);" onclick="showSection('areas-of-expertise')">Expertise</a>
+                <a href="javascript:void(0);" onclick="showSection('contact-info')">Contact</a>
+            </div>
+
+            <!-- Profile photo -->
+            <div class="profile-photo">
+                <img src="team6.jpg" alt="DR. RACHEL ADAMS">
+            </div>
+
+            <!-- Profile details -->
+            <div class="profile-details">
+                <section class="biography section-content">
+                    <h2>Biography</h2>
+                    <p>CHRIS WALKER is a creative leader with over 10 years of experience in graphic design, user
+                        experience, and creative direction. He has led successful design projects for various
+                        industries, pushing the boundaries of visual storytelling and brand identity.</p>
+                </section>
+
+                <section class="qualifications section-content">
+                    <h2>Qualifications</h2>
+                    <ul>
+                        <li>Bachelor's in Graphic Design from XYZ University</li>
+                        <li>Master's in Creative Arts from ABC Institute</li>
+                        <li>Certified UX/UI Designer</li>
+                    </ul>
+                </section>
+
+                <section class="areas-of-expertise section-content">
+                    <h2>Areas of Expertise</h2>
+                    <ul>
+                        <li>Creative Direction</li>
+                        <li>Graphic Design and Visual Arts</li>
+                        <li>User Experience (UX) Design</li>
+                        <li>Brand Strategy</li>
+                        <li>Web and Mobile Design</li>
+                    </ul>
+                </section>
+
+                <section class="contact-info section-content">
+                    <h2>Contact Information</h2>
+                    <p>Email: <a href="mailto:jeffrey.brown@example.com">CHRIS WALKER@example.com</a></p>
+                    <p>Phone: +123-456-7890</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/jeffreybrown"
+                            target="_blank">linkedin.com/in/CHRIS WALKER</a></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <a href="index.html">
+                    <img alt="Company Logo" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                        width="100" /></a>
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        // Function to show the relevant section content and update the active link
+function showSection(sectionName) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    const sectionToShow = document.querySelector(`.${sectionName}`);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+    }
+
+    // Remove active class from all navbar links
+    const navbarLinks = document.querySelectorAll('.navbar a');
+    navbarLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to the clicked navbar link
+    const activeLink = document.querySelector(`.navbar a[href="javascript:void(0);"][onclick="showSection('${sectionName}')"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+}
+
+// Initialize by showing the Biography section and setting the active link
+document.addEventListener('DOMContentLoaded', function () {
+    showSection('biography');
+});
+    </script>
+
+</body>
+
+</html>

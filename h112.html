@@ -1,0 +1,550 @@
+<html>
+
+<head>
+    <title>
+        HiveCheck
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="h&f.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header img {
+            max-width: 50%;
+            /* height: auto; */
+            height: 420px;
+            border-radius: 8px;
+        }
+
+        .header .info {
+            flex: 1;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header .info h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header .info .price {
+            font-size: 20px;
+            color: #009688;
+            margin: 10px 0;
+        }
+
+        .header .info .price del {
+            color: #999;
+            margin-left: 10px;
+        }
+
+        .header .info .window-period {
+            color: #009688;
+            text-decoration: underline;
+        }
+
+        .header .info p {
+            margin: 10px 0;
+        }
+
+        .header .info .note {
+            color: red;
+            font-weight: bold;
+        }
+
+        .header .info .chat {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .info .chat i {
+            margin-right: 10px;
+        }
+
+        .details {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .details .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .details .row div {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .details .row div h3 {
+            font-size: 18px;
+            color: #009688;
+            margin-bottom: 10px;
+        }
+
+        .details .row div p {
+            margin: 0;
+        }
+
+        .book-now {
+            background-color: #009688;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 20px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .book-now:hover {
+            background-color: #00796b;
+        }
+
+        /*  */
+
+        .book-now {
+            position: relative;
+            background-color: #009688;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            overflow: hidden;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 230px;
+            margin-right: -540px;
+            margin-top: -54px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .book-now:hover {
+            background-color: #009688;
+            box-shadow: 0 8px 20px rgba(99, 255, 182, 0.4);
+        }
+
+        .book-now a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-now::before {
+            content: '\f073';
+            /* Font Awesome calendar icon */
+            font-family: "Font Awesome 5 Free";
+            /* Font Awesome font-family */
+            font-weight: 900;
+            /* Font Awesome icon weight */
+            position: absolute;
+            right: -40px;
+            opacity: 0;
+            font-size: 1.5rem;
+            transition: all 0.5s ease;
+        }
+
+        .book-now:hover::before {
+            right: 10px;
+            opacity: 1;
+        }
+
+
+        /* underline */
+
+        .underlined-heading {
+            position: relative;
+            display: inline-block;
+            /* Ensures width is based on content */
+            font-size: 2rem;
+            /* Adjust font size as needed */
+            color: #333;
+            /* Adjust text color */
+            right: -480px;
+        }
+
+        .underlined-heading::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            /* Adjust the distance between text and underline */
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            /* Thin underline */
+            background-color: #333;
+            /* Adjust underline color */
+            border-radius: 0;
+            /* Sharp edges */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+                <img alt="HIV Awareness Logo" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="40" /></a>
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+
+    </div>
+    <!-- header end  -->
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <img alt="Doctor shaking hands with a patient" height="300" src="h112.jpg" width="600" />
+                
+                
+                
+                <div class="info">
+                    <h1>
+                        GroupCare HIV Screening
+                    </h1>
+                    <div class="price">
+                        ₹ 1499
+                        <del>
+                            ₹ 3000
+                        </del>
+                    </div>
+                    <div class="window-period">
+                        Window Period: 2-4 weeks
+                    </div>
+                    <p>
+                        GroupCare HIV Screening is designed to provide HIV testing services to groups or communities, offering a convenient and confidential way to get tested together. This service is ideal for organizations, support groups, or any collective seeking to raise awareness, reduce stigma, and promote collective health and well-being.
+                    </p>
+                    <p>
+                        With a window period of 2-4 weeks, GroupCare HIV Screening is ideal for early detection. The service offers quick and accurate results in a group setting, fostering a supportive and non-judgmental environment for individuals to access HIV testing with confidence.
+                    </p>
+                    <p class="note">
+                        -*Note:- 
+                        <br />
+                        * A confirmatory test at a healthcare facility may be required if the result is positive.
+                    </p>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+            </div>
+            <button class="book-now">
+                <a href="appointment.html">Book Now</a>
+            </button>
+
+            <br>
+            <br>
+            <br>
+            <div class="details">
+                <h2 class="underlined-heading">
+                    Service Details
+                </h2>
+                <br><br>
+                <div class="row">
+                    <div>
+                        <h3>
+                            Window period:
+                        </h3>
+                        <p>
+                            2-6 weeks
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Sample required:
+                        </h3>
+                        <p>
+                            Blood sample (fingerstick or venous)
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Special Preparation:
+                        </h3>
+                        <p>
+                            No fasting or special preparation required
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <h3>
+                            Reports:
+                        </h3>
+                        <p>
+                            Receive confidential results via e-report within 48 hours after testing.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Home sample collection:
+                        </h3>
+                        <p>
+                            Free home collection of samples for your convenience and privacy.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Tele-consult with Doctor:
+                        </h3>
+                        <p>
+                            Access a detailed consultation with an expert, at no extra charge, to discuss your results.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <h3>
+                            What does it test for?
+                        </h3>
+                        <p>
+                            HIV-1 and HIV-2 Antibodies
+                            <br />
+                            The At-Home Results service tests for both HIV-1 and HIV-2 antibodies, providing a discreet and accurate screening option.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Where should I get tested?
+                        </h3>
+                        <p>
+                            You can conveniently perform the test at home using the At-Home Results kit, designed for ease of use and privacy.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            When to test?
+                        </h3>
+                        <p>
+                            It is recommended to wait 2-6 weeks after potential exposure for accurate results. For those who are sexually active or at high risk, regular testing is recommended.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+
+    <!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img alt="Company Logo" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                            width="100" /></a>
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

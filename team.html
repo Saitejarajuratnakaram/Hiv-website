@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiveCheck</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="h&f.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body1 {
+            /* background-color: #2c2c2c; */
+           
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+           
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 202px;
+            padding: 20px;
+           
+        }
+
+        .card {
+            position: relative;
+            border-radius: 10px;
+            gap: 100px;
+        }
+
+        .card img {
+            width: 69%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card .info {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            width: 54%;
+            border-radius: 0 10px 10px 0;
+            margin-left: 233px;
+            margin-bottom: 63px;
+            height: 147px;
+        }
+
+        .card .info h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .card .info h2 a {
+            text-decoration: none;
+            color: inherit;
+            
+        }
+
+
+        .card .info h3 {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #b89b7a;
+        }
+
+        .card .info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card .info .social a {
+            color: #666;
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .card .info .social a:hover {
+            color: #333;
+        }
+
+        .pagination {
+            margin: 20px 0;
+        }
+
+        .pagination span {
+            color: #fff;
+            background-color: #666;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .pagination span.active {
+            background-color: #b89b7a;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+                <img alt="HIV Awareness Logo" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="40" /></a>
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+    </div>
+    <!-- header end  -->
+     <body1>
+    <div class="container" id="cardContainer">
+        <!-- Cards will be dynamically rendered here -->
+    </div>
+    
+    <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be dynamically rendered here -->
+    </div>
+</body1>
+    <br>
+    <br>
+
+    <!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img alt="Company Logo" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                            width="100" /></a>
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        const cardsData = [
+            {
+                img: "team1.jpg",
+                name: "<a href='t1.html'>DR. RACHEL ADAMS</a>",
+                title: "HIV Specialist",
+                desc: "Ensures accurate diagnosis and personalized patient care."
+            }
+
+            ,
+            {
+                img: "team2.jpg",
+                name: "<a href='t2.html'>JAMES CARTER</a>",
+                title: "Lab Technician",
+                desc: "Handles testing equipment and processes samples efficiently."
+            },
+            {
+                img: "team3.jpg",
+                name: "<a href='t3.html'>EMILY THOMAS</a>",
+                title: "Counselor",
+                desc: "Provides emotional support and guidance to patients."
+            },
+            {
+                img: "team4.jpg",
+                name: "<a href='t4.html'>DAVID LEE</a>",
+                title: "Outreach Coordinator",
+                desc: "Organizes community programs to promote HIV awareness."
+            },
+            {
+                img: "team5.jpg",
+                name: "<a href='t5.html'>OLIVIA MARTIN</a>",
+                title: "Nurse Practitioner",
+                desc: "Delivers compassionate clinical care and advice to patients."
+            },
+            {
+                img: "team6.jpg",
+                name: "<a href='t6.html'>CHRIS WALKER</a>",
+                title: "Data Analyst",
+                desc: "Analyzes testing trends to optimize prevention strategies."
+            },
+            {
+                img: "team7.jpg",
+                name: "<a href='t7.html'>SOPHIA TURNER</a>",
+                title: "Program Manager",
+                desc: "Leads initiatives to expand access to testing facilities."
+            },
+            {
+                img: "https://storage.googleapis.com/a1aa/image/6hs9xXyl8ZJDAdNO9ZOLhY2igI3hUCd3snXHlZUIdlZYI38E.jpg",
+                name: "SOPHIA KING",
+                title: "software architect",
+                desc: "Adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+            },
+            {
+                img: "team9.jpg",
+                name: "<a href='t9.html'>AVA PEREZ</a>",
+                title: "Health Educator",
+                desc: "Teaches communities about prevention and treatment options."
+            },
+            {
+                img: "team10.jpg",
+                name: "<a href='t10.html'>LUCAS WHITE</a>",
+                title: "Research Scientist",
+                desc: "Focuses on advancing HIV testing technology and methods."
+            },
+            {
+                img: "team11.jpg",
+                name: "<a href='t11.html'>ISABEL WATSON</a>",
+                title: "Policy Advisor",
+                desc: "Advocates for improved HIV prevention policies."
+            },
+            {
+                img: "team12.jpg",
+                name: "<a href='t12.html'>LOGAN SCOTT</a>",
+                title: "Volunteer Trainer",
+                desc: "Prepares volunteers to assist with testing services."
+            },
+            {
+                img: "team13.jpg",
+                name: "<a href='t13.html'>MIA ROGERS</a>",
+                title: "Quality Assurance Specialist",
+                desc: "Ensures testing accuracy and compliance with protocols."
+            },
+            {
+                img: "team14.jpg",
+                name: "<a href='t14.html'>BENJAMIN CLARK</a>",
+                title: "Community Liaison",
+                desc: "Builds trust with local communities to promote testing."
+            },
+            {
+                img: "team15.jpg",
+                name: "<a href='t15.html'>EMMA BROWN</a>",
+                title: "Patient Advocate",
+                desc: "Helps individuals access care and support services."
+            },
+            {
+                img: "team16.jpg",
+                name: "<a href='t16.html'>WILLIAM KING</a>",
+                title: "Clinical Supervisor",
+                desc: "Oversees healthcare staff to ensure quality service."
+            },
+            {
+                img: "team17.jpg",
+                name: "<a href='t17.html'>CHARLOTTE DIAZ</a>",
+                title: "Epidemiologist",
+                desc: "Studies data to identify trends and hotspots for HIV cases."
+            },
+            {
+                img: "team18.jpg",
+                name: "<a href='t18.html'>ETHAN JONES</a>",
+                title: "Program Evaluator",
+                desc: "Measures the impact of outreach and testing programs."
+            },
+            {
+                img: "team19.jpg",
+                name: "<a href='t19.html'>AMELIA COOPER</a>",
+                title: "Logistics Specialist",
+                desc: "Manages the supply chain for testing resources."
+            },
+            {
+                img: "team20.jpg",
+                name: "<a href='20.html'>OLIVER EVANS</a>",
+                title: "PR Manager",
+                desc: "Creates campaigns to reduce stigma and promote awareness."
+            },
+            {
+                img: "team21.jpg",
+                name: "<a href='t21.html'>SOPHIE REED</a>",
+                title: "Digital Strategist",
+                desc: "Develops online resources to encourage testing."
+            },
+            {
+                img: "team22.jpg",
+                name: "<a href='t22.html'>LIAM BAKER</a>",
+                title: "Social Worker",
+                desc: "Provides support for patients navigating treatment plans."
+            },
+            {
+                img: "team23.jpg",
+                name: "<a href='t23.html'>HAZEL HENDERSON</a>",
+                title: "Operations Manager",
+                desc: "Coordinates multiple testing sites for efficiency."
+            },
+            {
+                img: "team24.jpg",
+                name: "<a href='t24.html'>LUCAS TAYLOR</a>",
+                title: "Financial Advisor",
+                desc: "Manages budgets for outreach and testing programs."
+            },
+            {
+                img: "team25.jpg",
+                name: "<a href='t25.html'>ISABELLE MORRIS</a>",
+                title: "Grant Writer",
+                desc: "Secures funding to expand testing initiatives."
+            },
+            {
+                img: "team26.jpg",
+                name: "<a href='t26.html'>JACKSON PERRY</a>",
+                title: "Trainer",
+                desc: "Educates staff and volunteers on testing procedures."
+            },
+            {
+                img: "team27.jpg",
+                name: "<a href='t27.html'>LAYLA ROBERTS</a>",
+                title: "Health Policy Expert",
+                desc: "Collaborates on policies for better HIV healthcare access."
+            },
+            {
+                img: "team28.jpg",
+                name: "<a href='t28.html'>LEVI MITCHELL</a>",
+                title: "Communications Specialist",
+                desc: "Spreads awareness through strategic media initiatives."
+            },
+            {
+                img: "team29.jpg",
+                name: "<a href='t29.html'>GRACE ALLEN</a>",
+                title: "Mobile Testing Operator",
+                desc: "Delivers testing services to underserved communities."
+            },
+            {
+                img: "team30.jpg",
+                name: "<a href='t30.html'>HENRY PHILLIPS</a>",
+                title: "Chief Strategist",
+                desc: "Develops plans to increase outreach and reduce new infections."
+            }
+        ];
+
+        const itemsPerPage = 10;
+        let currentPage = 1;
+
+        function renderCards() {
+            const cardContainer = document.getElementById("cardContainer");
+            cardContainer.innerHTML = "";
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+
+            const currentCards = cardsData.slice(startIndex, endIndex);
+
+            currentCards.forEach(card => {
+                cardContainer.innerHTML += `
+                <div class="card">
+                    <img src="${card.img}" alt="${card.name}">
+                    <div class="info">
+                        <h2>${card.name}</h2>
+                        <h3>${card.title}</h3>
+                        <p>${card.desc}</p>
+                        <div class="social">
+                            <a href="https://www.facebook.com/login.php/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+        }
+
+        function renderPagination() {
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
+
+            const totalPages = Math.ceil(cardsData.length / itemsPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `
+                <span class="${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</span>
+                `;
+            }
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            renderCards();
+            renderPagination();
+        }
+
+        // Initial render
+        renderCards();
+        renderPagination();
+    </script>
+
+</body>
+
+</html>

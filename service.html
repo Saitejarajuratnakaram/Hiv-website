@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiveCheck</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="h&f.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        /* body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        } */
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #009688, #ff6584);
+            top: 0;
+            left: 0;
+        }
+
+        .icon {
+            font-size: 3rem;
+            color: #009688;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* service card */
+        .service-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            /* Retain original text color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <a href="index.html">
+                <img alt="HIV Awareness Logo" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                    width="40" /></a>
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+    </div>
+    <!-- header end  -->
+    <br>
+    <br>
+    <div class="services-container" style="padding: 20px; margin-left: 36px;">
+        <div class="service-card">
+            <a href="h1.html">
+                <div class="icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="title">Rapid HIV Check</h3>
+                <p class="description">Fast and efficient testing for quick detection and peace of mind.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h2.html">
+                <div class="icon">
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+                <h3 class="title">Instant Result Testing</h3>
+                <p class="description">Accurate HIV results delivered instantly for timely action.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h3.html">
+                <div class="icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="title">SpeedTest HIV</h3>
+                <p class="description">High-speed testing services designed for rapid HIV detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h4.html">
+                <div class="icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h3 class="title">Fast Detect Service</h3>
+                <p class="description">Quick and reliable service for fast HIV detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h5.html">
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="title">Quick Screen HIV</h3>
+                <p class="description">Comprehensive screening with immediate results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h6.html">
+                <div class="icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="title">Rapid Response Testing</h3>
+                <p class="description">Swift and responsive HIV testing for accurate results.</p>
+            </a>
+        </div>
+    </div>
+    <div class="services-container" style="padding: 20px; margin-left: 36px;">
+        <div class="service-card">
+            <a href="h7.html">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="title">Immediate HIV Results</h3>
+                <p class="description">Get your HIV test results instantly with our fast testing options.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h8.html">
+                <div class="icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3 class="title">On-the-Go Testing</h3>
+                <p class="description">Convenient HIV testing services available at your location.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h9.html">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="title">Mobile Rapid Test</h3>
+                <p class="description">HIV rapid testing with mobile services available at your doorstep.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h10.html">
+                <div class="icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="title">Express HIV Testing</h3>
+                <p class="description">Fast and reliable express HIV testing for immediate peace of mind.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h11.html">
+                <div class="icon">
+                    <i class="fas fa-gold"></i>
+                </div>
+                <h3 class="title">ELISA Gold Test</h3>
+                <p class="description">The gold standard for HIV testing with highly accurate results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h12.html">
+                <div class="icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3 class="title">Western Blot Analysis</h3>
+                <p class="description">Confirmatory test to detect HIV antibodies with precision.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h13.html">
+                <div class="icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3 class="title">PCR HIV Detection</h3>
+                <p class="description">Polymerase Chain Reaction (PCR) testing for early detection of HIV.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h14.html">
+                <div class="icon">
+                    <i class="fas fa-prescription-bottle"></i>
+                </div>
+                <h3 class="title">Antibody Screening Lab</h3>
+                <p class="description">Comprehensive lab testing for HIV antibodies detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h15.html">
+                <div class="icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3 class="title">Molecular HIV Testing</h3>
+                <p class="description">Advanced molecular testing for accurate HIV diagnosis.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h16.html">
+                <div class="icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="title">Advanced Diagnostic Labs</h3>
+                <p class="description">State-of-the-art labs for cutting-edge HIV diagnostic testing.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h17.html">
+                <div class="icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3 class="title">RNA Quantification Service</h3>
+                <p class="description">Accurate RNA quantification for monitoring HIV infection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h18.html">
+                <div class="icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3 class="title">DNA Screening Clinic</h3>
+                <p class="description">Specialized DNA testing for HIV detection and monitoring.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h19.html">
+                <div class="icon">
+                    <i class="fas fa-virus"></i>
+                </div>
+                <h3 class="title">Viral Load Test Lab</h3>
+                <p class="description">Test to measure the amount of HIV virus in your blood.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h20.html">
+                <div class="icon">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <h3 class="title">Immunoassay Testing</h3>
+                <p class="description">Advanced immunoassay testing for HIV detection and diagnosis.</p>
+            </a>
+        </div>
+    
+    
+        <div class="service-card">
+            <a href="h21.html">
+                <div class="icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h3 class="title">HomeCheck HIV Kit</h3>
+                <p class="description">Convenient at-home HIV testing kit for private and reliable results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h22.html">
+                <div class="icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h3 class="title">EasyTest At-Home Kit</h3>
+                <p class="description">Simple and discreet HIV test at home with fast results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h23.html">
+                <div class="icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3 class="title">SelfCare Testing</h3>
+                <p class="description">Private self-testing for HIV and peace of mind from home.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h24.html">
+                <div class="icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="title">HIV Home Access Kit</h3>
+                <p class="description">Access HIV testing kits at your convenience from home.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h25.html">
+                <div class="icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3 class="title">Private Testing Solution</h3>
+                <p class="description">Confidential testing solution for your HIV health check.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h26.html">
+                <div class="icon">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <h3 class="title">Discreet HIV Check</h3>
+                <p class="description">Unobtrusive HIV testing for your privacy and convenience.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h27.html">
+                <div class="icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="title">DIY HIV Screening</h3>
+                <p class="description">Do-it-yourself HIV screening from the comfort of your home.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h28.html">
+                <div class="icon">
+                    <i class="fas fa-first-aid"></i>
+                </div>
+                <h3 class="title">QuickCare Home Kit</h3>
+                <p class="description">Fast and easy HIV test delivered to your doorstep for quick results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h29.html">
+                <div class="icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="title">ComfortCheck Testing</h3>
+                <p class="description">Comfortable and accurate HIV testing from your home.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h30.html">
+                <div class="icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3 class="title">At-Home Results</h3>
+                <p class="description">Get your HIV test results at home with minimal wait time.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h31.html">
+                <div class="icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3 class="title">Complete HIV Panel</h3>
+                <p class="description">Comprehensive HIV testing panel for accurate and thorough results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h32.html">
+                <div class="icon">
+                    <i class="fas fa-biohazard"></i>
+                </div>
+                <h3 class="title">Advanced STD Testing</h3>
+                <p class="description">Complete STD and HIV testing for comprehensive sexual health checks.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h33.html">
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3 class="title">HIV & Co-infection Check</h3>
+                <p class="description">Test for HIV and other co-infections with a single test for comprehensive care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h34.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">Full Spectrum Diagnosis</h3>
+                <p class="description">Get a full spectrum of HIV tests for complete diagnostic accuracy.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h35.html">
+                <div class="icon">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <h3 class="title">Prevention+ Package</h3>
+                <p class="description">Prevention-focused testing package for early HIV detection and care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h36.html">
+                <div class="icon">
+                    <i class="fas fa-clipboard"></i>
+                </div>
+                <h3 class="title">All-in-One Screening</h3>
+                <p class="description">Comprehensive HIV and health screening for holistic care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h37.html">
+                <div class="icon">
+                    <i class="fas fa-vials"></i>
+                </div>
+                <h3 class="title">Inclusive HIV Panel</h3>
+                <p class="description">Inclusive testing panel for HIV and related health conditions.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h38.html">
+                <div class="icon">
+                    <i class="fas fa-diagnoses"></i>
+                </div>
+                <h3 class="title">Dual Marker HIV Test</h3>
+                <p class="description">A dual-marker test for HIV detection using two distinct methods.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h39.html">
+                <div class="icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="title">Triple Detection Service</h3>
+                <p class="description">Triple HIV detection service offering the highest level of accuracy.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h40.html">
+                <div class="icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3 class="title">Full Diagnostic Care</h3>
+                <p class="description">Full diagnostic care for HIV and related conditions with expert advice.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h41.html">
+                <div class="icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="title">SafeTalk Counseling</h3>
+                <p class="description">Confidential counseling for individuals seeking support and guidance.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h42.html">
+                <div class="icon">
+                    <i class="fas fa-clinic-medical"></i>
+                </div>
+                <h3 class="title">Positive Path Clinic</h3>
+                <p class="description">A clinic dedicated to providing HIV care and management services.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h43.html">
+                <div class="icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="title">HIV Awareness Center</h3>
+                <p class="description">Raising awareness about HIV prevention, treatment, and care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h44.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">Pre-Test Counseling Hub</h3>
+                <p class="description">Guidance and support before undergoing HIV testing.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h45.html">
+                <div class="icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="title">Post-Diagnosis Care</h3>
+                <p class="description">Comprehensive care and support after an HIV diagnosis.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h46.html">
+                <div class="icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="title">Partner Support Testing</h3>
+                <p class="description">Support services for partners of individuals undergoing HIV testing.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h47.html">
+                <div class="icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3 class="title">Community HIV Support</h3>
+                <p class="description">Building community support and networks for people living with HIV.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h48.html">
+                <div class="icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3 class="title">WellBeing Counseling</h3>
+                <p class="description">Counseling services focused on mental and physical well-being.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h49.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">Family HIV Check</h3>
+                <p class="description">Comprehensive HIV testing and counseling for families.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h50.html">
+                <div class="icon">
+                    <i class="fas fa-medkit"></i>
+                </div>
+                <h3 class="title">Wellness Testing & Support</h3>
+                <p class="description">Providing HIV testing and ongoing wellness support.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h51.html">
+                <div class="icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <h3 class="title">HIV Antigen Test</h3>
+                <p class="description">Testing for HIV antigens to detect the virus early.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h52.html">
+                <div class="icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3 class="title">Genotype Analysis</h3>
+                <p class="description">Analyzing HIV strains to provide tailored treatment plans.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h53.html">
+                <div class="icon">
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <h3 class="title">Serology Test Center</h3>
+                <p class="description">Comprehensive serology tests for accurate HIV diagnosis.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h54.html">
+                <div class="icon">
+                    <i class="fas fa-biohazard"></i>
+                </div>
+                <h3 class="title">P24 Antigen Screening</h3>
+                <p class="description">Screening for the HIV p24 antigen for early detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h55.html">
+                <div class="icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3 class="title">Resistance Mutation Analysis</h3>
+                <p class="description">Analysis of mutations to understand HIV drug resistance.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h56.html">
+                <div class="icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3 class="title">Immune System Monitoring</h3>
+                <p class="description">Monitoring of the immune system for effective HIV management.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h57.html">
+                <div class="icon">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+                <h3 class="title">Fourth-Generation Testing</h3>
+                <p class="description">Cutting-edge testing technology for rapid HIV detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h58.html">
+                <div class="icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <h3 class="title">Phenotype Profiling</h3>
+                <p class="description">Detailed profiling of HIV strains for personalized treatment.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h59.html">
+                <div class="icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <h3 class="title">Subtype Testing Lab</h3>
+                <p class="description">Testing for different HIV subtypes for accurate diagnosis.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h60.html">
+                <div class="icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3 class="title">Co-Receptor Tropism Check</h3>
+                <p class="description">Test to determine co-receptor tropism and guide treatment.</p>
+            </a>
+        </div>
+   
+        <div class="service-card">
+            <a href="h61.html">
+                <div class="icon">
+                    <i class="fas fa-clinic-medical"></i>
+                </div>
+                <h3 class="title">OneStop HIV Testing</h3>
+                <p class="description">Comprehensive HIV testing at a single location for your convenience.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h62.html">
+                <div class="icon">
+                    <i class="fas fa-walking"></i>
+                </div>
+                <h3 class="title">Walk-In Screening Hub</h3>
+                <p class="description">No appointment needed for quick and confidential HIV screening.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h63.html">
+                <div class="icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <h3 class="title">Same-Day Testing Center</h3>
+                <p class="description">Get your results on the same day with our fast and reliable testing service.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h64.html">
+                <div class="icon">
+                    <i class="fas fa-car-side"></i>
+                </div>
+                <h3 class="title">Drive-Through HIV Check</h3>
+                <p class="description">Convenient drive-through testing with privacy and quick results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h65.html">
+                <div class="icon">
+                    <i class="fas fa-clinic-medical"></i>
+                </div>
+                <h3 class="title">CityCare HIV Clinic</h3>
+                <p class="description">Expert HIV care and counseling available at CityCare Clinic.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h66.html">
+                <div class="icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <h3 class="title">HIV Testing Station</h3>
+                <p class="description">State-of-the-art HIV testing facilities at our testing stations.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h67.html">
+                <div class="icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <h3 class="title">Urban Screening Services</h3>
+                <p class="description">Fast and discreet HIV testing services in urban areas.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h68.html">
+                <div class="icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="title">Accessible HIV Care</h3>
+                <p class="description">Ensuring HIV testing and care are accessible to all.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h69.html">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="title">Community Test Point</h3>
+                <p class="description">Testing points available throughout the community for easy access.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h70.html">
+                <div class="icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="title">ExpressCare Walk-In</h3>
+                <p class="description">Quick walk-in HIV testing with immediate results in an express format.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h71.html">
+                <div class="icon">
+                    <i class="fas fa-file-medical-alt"></i>
+                </div>
+                <h3 class="title">Routine HIV Screening</h3>
+                <p class="description">Scheduled routine HIV screenings for your health and peace of mind.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h72.html">
+                <div class="icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="title">CheckUp Prevention Services</h3>
+                <p class="description">HIV prevention services and testing for early intervention.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h73.html">
+                <div class="icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3 class="title">Annual HIV Health Check</h3>
+                <p class="description">Routine annual check-ups for maintaining your HIV health status.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h74.html">
+                <div class="icon">
+                    <i class="fas fa-prescription"></i>
+                </div>
+                <h3 class="title">Prevent+ Testing Service</h3>
+                <p class="description">Testing services that focus on prevention and early detection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h75.html">
+                <div class="icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <h3 class="title">RegularCare HIV Test</h3>
+                <p class="description">Routine HIV testing to keep track of your health status.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h76.html">
+                <div class="icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3 class="title">Risk Assessment Screening</h3>
+                <p class="description">Comprehensive screening to assess your risk of HIV infection.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h77.html">
+                <div class="icon">
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <h3 class="title">Pre-Exposure Prophylaxis Test</h3>
+                <p class="description">Testing and consultation for individuals considering PrEP.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h78.html">
+                <div class="icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="title">Awareness+ Testing</h3>
+                <p class="description">Raising awareness through testing for better HIV prevention.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h79.html">
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="title">Early Stage Detection</h3>
+                <p class="description">Early HIV detection to begin treatment as soon as possible.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h80.html">
+                <div class="icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="title">Immunity Health Check</h3>
+                <p class="description">Monitoring your immune system and overall health status.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h81.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">YouthCare HIV Testing</h3>
+                <p class="description">Youth-focused HIV testing and counseling to ensure safe health practices.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h82.html">
+                <div class="icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3 class="title">Campus Screening Clinics</h3>
+                <p class="description">Convenient HIV screenings available at campus locations for students.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h83.html">
+                <div class="icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="title">YoungHealth HIV Awareness</h3>
+                <p class="description">Educational and awareness programs about HIV tailored to young people.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h84.html">
+                <div class="icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3 class="title">SchoolCare Diagnostics</h3>
+                <p class="description">HIV diagnostic services tailored for school environments and youth.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h85.html">
+                <div class="icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3 class="title">TeensFirst HIV Check</h3>
+                <p class="description">Early HIV testing for teenagers to promote a healthy future.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h86.html">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="title">FutureSafe HIV Testing</h3>
+                <p class="description">Proactive HIV testing for young people to secure a healthy future.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h87.html">
+                <div class="icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3 class="title">GenNext Screening</h3>
+                <p class="description">Next-generation HIV screening services aimed at younger generations.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h88.html">
+                <div class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="title">CollegeCare HIV Services</h3>
+                <p class="description">HIV care and testing services designed for college students.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h89.html">
+                <div class="icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="title">Awareness Outreach Clinic</h3>
+                <p class="description">Outreach programs to raise HIV awareness within communities.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h90.html">
+                <div class="icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3 class="title">StudentCare Testing</h3>
+                <p class="description">Convenient HIV testing services for students at affordable rates.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h91.html">
+                <div class="icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="title">MobileCheck Diagnostics</h3>
+                <p class="description">Mobile HIV testing units that bring testing directly to you.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h92.html">
+                <div class="icon">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+                <h3 class="title">On-Site HIV Testing Unit</h3>
+                <p class="description">On-site HIV testing available for events, organizations, and workplaces.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h93.html">
+                <div class="icon">
+                    <i class="fas fa-rss"></i>
+                </div>
+                <h3 class="title">Remote HIV Screening</h3>
+                <p class="description">Convenient remote HIV screenings for people who prefer to test from home.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h94.html">
+                <div class="icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h3 class="title">Portable Test Services</h3>
+                <p class="description">Portable HIV testing kits that offer flexibility and privacy.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h95.html">
+                <div class="icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3 class="title">Virtual HIV Counseling</h3>
+                <p class="description">Virtual counseling for individuals seeking guidance after HIV testing.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h96.html">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="title">App-Based HIV Check</h3>
+                <p class="description">Take control of your health with app-based HIV testing and results tracking.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h97.html">
+                <div class="icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="title">TeleHealth HIV Testing</h3>
+                <p class="description">Convenient HIV testing through telehealth platforms, from consultation to results.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h98.html">
+                <div class="icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <h3 class="title">At-Your-Door Diagnostics</h3>
+                <p class="description">HIV testing kits delivered to your door with easy, step-by-step instructions.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h99.html">
+                <div class="icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3 class="title">EasyAccess HIV Mobile Test</h3>
+                <p class="description">Easy access to mobile HIV testing services wherever you are.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h100.html">
+                <div class="icon">
+                    <i class="fas fa-truck-pickup"></i>
+                </div>
+                <h3 class="title">Roadside HIV Test Units</h3>
+                <p class="description">Drive-up HIV testing units offering quick and confidential screenings.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h101.html">
+                <div class="icon">
+                    <i class="fas fa-female"></i>
+                </div>
+                <h3 class="title">Women’s Health HIV Check</h3>
+                <p class="description">Specialized HIV testing for women's health, with focused care and support.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h102.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">LGBTQ+ HIV Testing Hub</h3>
+                <p class="description">Confidential and supportive HIV testing services for the LGBTQ+ community.</p>
+            </a>
+        </div>
+        
+    
+        <div class="service-card">
+            <a href="h103.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">Minority Care Testing</h3>
+                <p class="description">Tailored HIV testing services for minority groups with culturally competent care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h104.html">
+                <div class="icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="title">Refugee Support Testing</h3>
+                <p class="description">HIV testing and support services for refugees and displaced individuals.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h105.html">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="title">HIV Testing for Veterans</h3>
+                <p class="description">Dedicated HIV testing and health services for military veterans.</p>
+            </a>
+        </div>
+        
+    
+        <div class="service-card">
+            <a href="h106.html">
+                <div class="icon">
+                    <i class="fas fa-hospital-alt"></i>
+                </div>
+                <h3 class="title">Homeless Shelter HIV Services</h3>
+                <p class="description">Accessible HIV testing for homeless individuals in shelters and outreach centers.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h107.html">
+                <div class="icon">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h3 class="title">Elderly Care Screening</h3>
+                <p class="description">Comprehensive HIV screening services for the elderly population in care facilities.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h108.html">
+                <div class="icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3 class="title">Rural HIV Diagnostics</h3>
+                <p class="description">Mobile HIV testing services bringing diagnostics to rural and remote communities.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h109.html">
+                <div class="icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <h3 class="title">First Responder HIV Check</h3>
+                <p class="description">HIV testing services designed for first responders to ensure their health and safety.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h110.html">
+                <div class="icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3 class="title">Culturally Sensitive Screening</h3>
+                <p class="description">HIV screenings that consider and respect cultural sensitivities and needs.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h111.html">
+                <div class="icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="title">Workplace HIV Awareness</h3>
+                <p class="description">Workplace HIV awareness programs to educate employees and promote health.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h112.html">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="title">GroupCare HIV Screening</h3>
+                <p class="description">HIV testing services designed for group settings, including community organizations.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h113.html">
+                <div class="icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="title">HIV Health Programs</h3>
+                <p class="description">Comprehensive health programs addressing HIV prevention, testing, and treatment.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h114.html">
+                <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="title">Employer HIV Checkups</h3>
+                <p class="description">Employer-led HIV checkups to ensure a healthy and safe workforce.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h115.html">
+                <div class="icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="title">Organization Health Screening</h3>
+                <p class="description">Health screening programs for organizations to promote employee wellness.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h116.html">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="title">HIV-Free Workplace Program</h3>
+                <p class="description">A workplace program focused on creating HIV-free environments through education and testing.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h117.html">
+                <div class="icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="title">Corporate HIV Services</h3>
+                <p class="description">Corporate HIV services to support workplace health initiatives and employee care.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h118.html">
+                <div class="icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="title">HIV Awareness Drives</h3>
+                <p class="description">Community outreach programs that focus on HIV awareness and prevention.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h119.html">
+                <div class="icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="title">SafeWork HIV Testing</h3>
+                <p class="description">HIV testing services designed for workplace safety and employee well-being.</p>
+            </a>
+        </div>
+    
+        <div class="service-card">
+            <a href="h120.html">
+                <div class="icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3 class="title">Employee Wellness Testing</h3>
+                <p class="description">Employee wellness programs focused on HIV testing and health checks for a healthier workforce.</p>
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+        
+
+    <br>
+    <br>
+    <!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img alt="Company Logo" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                            width="100" /></a>
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

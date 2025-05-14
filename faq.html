@@ -1,0 +1,738 @@
+<html>
+
+<head>
+    <title>
+        HiveCheck
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="h&f.css" rel="stylesheet">
+
+
+<style>
+    /* Logo Animation */
+#logo-container {
+    display: flex;
+    align-items: center;
+    float: left;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#logo {
+    height: 71px;
+    margin-right: 10px;
+}
+
+#site-name {
+    
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hero Header Animation */
+.hero-header a {
+    margin: 15px 10px;
+    color: yellow;
+}
+
+.hero-header h1 {
+    color: #ffffff;
+    text-align: center;
+    animation: fadeIn 1s forwards;
+}
+
+.hero-header i {
+    color: #ffffff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-header {
+        height: 300px;
+    }
+}
+
+/* FAQ Container */
+.faq-container {
+    max-width: 800px;
+    width: 100%;
+    justify-content: center;
+    margin: 100px auto 0;
+    padding: 20px;
+    background-size: cover;
+    transition: box-shadow 0.9s ease;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 2s forwards;
+}
+
+.man {
+    background-image: url(faq1.webp);
+    background-size: cover;
+}
+
+/* Tabs */
+.faq-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: slideInDown 0.5s forwards;
+}
+
+.tab {
+    background: none;
+    border: none;
+   
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tab.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+.tab:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Search Box */
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box1 input {
+    width: 95%;
+    max-width: 800px;
+    padding: 10px;
+   
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Accordion Item Header */
+.accordion-header {
+    background-color: transparent;
+    padding: 15px;
+  
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+/* When the accordion item is clicked (active state) */
+.accordion-header.active {
+    background-color: #8bc34a; /* Green background when active */
+    color: #fff; /* White text when active */
+}
+
+/* When the accordion header is focused or clicked */
+.accordion-header:focus {
+    outline: none;
+    background-color:#8bc34a ; /* Green background when focused */
+    color: #fff; /* White text on focus */
+}
+
+/* Change the icon when the accordion item is active */
+.accordion-header.active::before {
+    content: '-'; /* Change icon to '-' when clicked */
+    color: #fff; /* Change icon color to white */
+}
+
+/* Hover effect to highlight the accordion header */
+.accordion-header:hover {
+    background-color: #e7e7e7; /* Light grey background when hovered */
+    color: #333; /* Dark text color when hovered */
+}
+
+/* Accordion content area */
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, color 0.3s ease; /* Added color transition */
+    color: #000; /* Default text color for answers */
+}
+
+/* When the accordion content is active (expanded), change the text color */
+.accordion-item.active .accordion-content {
+    color: #007BFF; /* Change answer text color to blue when active */
+}
+
+/* Accordion content paragraph */
+.accordion-content p {
+    margin: 15px 0;
+    color: inherit; /* Inherit color from the parent (accordion-content) */
+}
+
+/* Animation for accordion item */
+@keyframes slideInLeft {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fading effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide down animation for elements */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slide Left & Right */
+.slide-left {
+    animation: slideInLeft 2s forwards;
+}
+
+.slide-right {
+    animation: slideInRight 3s forwards;
+}
+
+.header8 {
+            /* background-color: #672B83; */
+            background-image: url(faq2.jpg);
+            color: rgb(251, 250, 250);
+            width: 100%;
+            height: 300px;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header8 h1 {
+            font-size: 2.8rem;
+            margin-top: 60px;
+        }
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="header-unique">
+        <div class="welcome-text-unique">
+            Welcome to a Professional HiveCheck
+        </div>
+        <div class="contact-info-unique">
+            <div>
+                <i class="fas fa-phone-alt"></i> +91 9876543210
+            </div>
+            <div>
+                <i class="fas fa-clock"></i> 6:00 AM - 10:00 PM (Mon-Fri)
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i> HiveCheck@gmail.com
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-bar-unique">
+        <div class="nav-bar-logo-unique">
+            <img alt="HIV Awareness Logo" height="40" src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg" width="40" />
+            <h1> HiveCheck </h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Doctors</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="appointment-btn-unique" href="appointment.html">Appointment</a>
+        <a class="appointment-btn-unique" style="margin-left: 18px;" href="dashboard.html">
+            <i class="fas fa-user"></i> <!-- Profile icon -->
+        </a>
+
+    </div>
+    <!-- header end  -->
+
+    <header class="header8">
+        <div class="container9">
+            <h1>Faq</h1>
+            
+        </div>
+    </header>
+
+
+    <div class="man">
+        <div class="faq-container">
+            <div class="faq-tabs">
+                <button class="tab active" data-target="hiv-testing">What is HIV?</button>
+                <button class="tab" data-target="how-tested">How is HIV Tested?</button>
+                <button class="tab" data-target="living-with-hiv">Living with HIV</button> <!-- New tab for the "Living with HIV" section -->
+                <button class="tab" data-target="impact-on-health">HIV and Its Impact on Health</button> <!-- New tab for the additional section -->
+            </div>
+    
+            <!-- Search Box -->
+            <div class="search-box1">
+                <input type="text" id="searchInput" placeholder="Search questions..." onkeyup="searchQuestions()">
+            </div><br>
+    
+            <!-- HIV Testing FAQ -->
+    
+            <!-- What is HIV? -->
+            <div class="accordion" id="hiv-testing">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is HIV?</button>
+                    <div class="accordion-content">
+                        <p>HIV (Human Immunodeficiency Virus) is a virus that attacks the immune system, making it harder for the body to fight infections.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How is HIV transmitted?</button>
+                    <div class="accordion-content">
+                        <p>HIV is primarily transmitted through unprotected sexual contact, sharing needles, and from mother to child during childbirth or breastfeeding.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What are the symptoms of HIV?</button>
+                    <div class="accordion-content">
+                        <p>Some people experience flu-like symptoms soon after infection, but others may not show symptoms for years. Common symptoms include fever, weight loss, and frequent infections.</p>
+                    </div>
+                </div>
+                <!-- Additional Questions for HIV -->
+                <div class="accordion-item">
+                    <button class="accordion-header">How long does it take for HIV to show symptoms?</button>
+                    <div class="accordion-content">
+                        <p>It can take anywhere from a few weeks to years for symptoms of HIV to appear in an individual.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can HIV be transmitted through casual contact?</button>
+                    <div class="accordion-content">
+                        <p>No, HIV cannot be transmitted through casual contact like hugging, shaking hands, or sharing food.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What is the difference between HIV and AIDS?</button>
+                    <div class="accordion-content">
+                        <p>HIV is the virus that can lead to AIDS (Acquired Immunodeficiency Syndrome), a condition where the immune system becomes severely weakened.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How does HIV affect the immune system?</button>
+                    <div class="accordion-content">
+                        <p>HIV attacks and destroys CD4 cells, which are critical for the immune system to fight infections and diseases.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can HIV be prevented?</button>
+                    <div class="accordion-content">
+                        <p>HIV can be prevented through safe sex practices, pre-exposure prophylaxis (PrEP), and regular HIV testing.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- How is HIV Tested? -->
+            <div class="accordion" id="how-tested" style="display: none;">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is an HIV test?</button>
+                    <div class="accordion-content">
+                        <p>An HIV test checks for HIV antibodies or HIV RNA in the blood. It is the most effective way to detect HIV infection.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How accurate are HIV tests?</button>
+                    <div class="accordion-content">
+                        <p>HIV tests are generally very accurate, but it may take up to three months for antibodies to appear in the blood after infection. This is known as the "window period".</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How long does it take to get HIV test results?</button>
+                    <div class="accordion-content">
+                        <p>Depending on the type of test, results can be available in a few minutes (rapid test), or it can take several days for laboratory tests.</p>
+                    </div>
+                </div>
+                <!-- Additional Questions for HIV Testing -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Are there different types of HIV tests?</button>
+                    <div class="accordion-content">
+                        <p>There are several types of HIV tests, including rapid tests, at-home tests, and laboratory-based tests, each with its own benefits.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What is the window period for HIV testing?</button>
+                    <div class="accordion-content">
+                        <p>The window period refers to the time after infection but before antibodies are detectable in the blood, typically 2 to 4 weeks.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What happens during an HIV test?</button>
+                    <div class="accordion-content">
+                        <p>An HIV test typically involves taking a sample of blood or saliva, which is then analyzed for HIV antibodies or RNA.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can HIV be detected through a saliva test?</button>
+                    <div class="accordion-content">
+                        <p>Yes, HIV can be detected using a saliva test, but it may not be as accurate as blood tests for some people.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How often should I get tested for HIV?</button>
+                    <div class="accordion-content">
+                        <p>It is recommended to get tested regularly, especially if you are at high risk or have multiple sexual partners.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accordion" id="living-with-hiv" style="display: none;">
+                <div class="accordion-item">
+                    <button class="accordion-header">How can I live a healthy life with HIV?</button>
+                    <div class="accordion-content">
+                        <p>Living a healthy life with HIV involves following antiretroviral therapy (ART), maintaining a balanced diet, exercising, and managing stress.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How often should I see my doctor if I have HIV?</button>
+                    <div class="accordion-content">
+                        <p>People with HIV should see their healthcare provider regularly (typically every 3 to 6 months) to monitor their health and adjust treatment if needed.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I have a normal life expectancy with HIV?</button>
+                    <div class="accordion-content">
+                        <p>Yes, with early diagnosis and proper treatment, people with HIV can live a long, healthy life with a near-normal life expectancy.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can people with HIV have children?</button>
+                    <div class="accordion-content">
+                        <p>Yes, with the right care and treatment, people with HIV can have children with a very low risk of transmitting the virus to their child.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How does HIV affect my social life?</button>
+                    <div class="accordion-content">
+                        <p>HIV may affect your social life due to stigma, but with the right support and education, people with HIV can lead fulfilling relationships and social lives.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I travel with HIV?</button>
+                    <div class="accordion-content">
+                        <p>Yes, people with HIV can travel, but they should ensure they have enough medication and understand the healthcare options available in their destination.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How can I manage the emotional challenges of living with HIV?</button>
+                    <div class="accordion-content">
+                        <p>Managing emotional challenges involves seeking mental health support, joining support groups, and maintaining open communication with loved ones.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What should I do if I miss a dose of my HIV medication?</button>
+                    <div class="accordion-content">
+                        <p>If you miss a dose, you should take it as soon as possible, but if it's almost time for your next dose, skip the missed dose and take the next dose as scheduled. Never double up.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue with other sections in the same pattern... -->
+            <div class="accordion" id="impact-on-health" style="display: none;">
+                <div class="accordion-item">
+                    <button class="accordion-header">How does HIV affect the immune system?</button>
+                    <div class="accordion-content">
+                        <p>HIV attacks and weakens the immune system by destroying CD4 cells, which help the body fight off infections.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What is AIDS?</button>
+                    <div class="accordion-content">
+                        <p>AIDS (Acquired Immunodeficiency Syndrome) is the final stage of HIV infection when the immune system is severely damaged.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What are opportunistic infections?</button>
+                    <div class="accordion-content">
+                        <p>Opportunistic infections are diseases that take advantage of a weakened immune system, common in people with HIV or AIDS.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How does HIV affect mental health?</button>
+                    <div class="accordion-content">
+                        <p>HIV can cause anxiety, depression, and other mental health challenges due to the stigma, stress, and physical symptoms associated with the virus.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can HIV be controlled with treatment?</button>
+                    <div class="accordion-content">
+                        <p>Yes, HIV can be controlled with antiretroviral therapy (ART), which helps manage the virus and maintain a healthy immune system.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What is the life expectancy of someone with HIV?</button>
+                    <div class="accordion-content">
+                        <p>With early diagnosis and consistent treatment, people with HIV can live a long, healthy life, with a similar life expectancy to those without HIV.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How does ART (Antiretroviral Therapy) work?</button>
+                    <div class="accordion-content">
+                        <p>ART involves taking a combination of medications that inhibit the HIV virus from replicating, allowing the immune system to stay stronger.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can HIV affect pregnancy?</button>
+                    <div class="accordion-content">
+                        <p>Yes, HIV can affect pregnancy, but with proper medical care, HIV-positive women can safely have a baby and reduce the risk of transmission to the baby.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<!-- footer start -->
+    <div class="main-container">
+        <div class="containeress">
+            <div class="section logo-section">
+                <div class="logo-container">
+                    <img alt="Company Logo" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/0xrXVG3rTGrFI1VAdmYtgcz84fahKXFxyvjUd49iGYh7Ru5JA.jpg"
+                        width="100" />
+                    <h1>
+                        HiveCheck
+                    </h1>
+                </div>
+                <p>
+                    Welcome to HiveCheck, your trusted partner in health and wellness. We provide top-notch services to
+                    ensure your well-being.
+                </p>
+            </div>
+            <div class="section contact-info">
+                <h2>
+                    <a href="contact.html" style="text-decoration: none; color: inherit;">
+                        Contact Info
+                    </a>
+                </h2>
+                <p>
+                    "Reach out to us for more information about our services and offerings."
+                </p>
+                <div class="icon-text">
+                    <i class="fas fa-phone-alt">
+                    </i>
+                    <span>
+                        +91 9876543210
+                    </span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope">
+                    </i>
+                    <span>
+                        HiveCheck@gmail.com
+                    </span>
+                </div>
+            </div>
+            <div class="section latest-news">
+                <h2>
+                    Quick Links
+                </h2>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-link-item">
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="quick-link-item">
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section opening-hours">
+                <h2>
+                    Opening Hours
+                </h2>
+                <p>
+                    Monday - Friday 06:00 AM - 10:00 PM
+                </p>
+                <p>
+                    Saturday 09:00 AM - 08:00 PM
+                </p>
+                <p>
+                    Sunday Closed
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="https://www.linkedIn.com">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2024 | HiveCheck
+            </p>
+
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.accordion-item');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Add slide class alternatively
+                        if (index % 2 === 0) {
+                            entry.target.classList.add('slide-left');
+                        } else {
+                            entry.target.classList.add('slide-right');
+                        }
+                        observer.unobserve(entry.target); // Stop observing after it has animated
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            faqItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+    <script>
+
+        const tabs = document.querySelectorAll('.tab');
+        const accordions = document.querySelectorAll('.accordion');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Hide all accordions
+                accordions.forEach(acc => acc.style.display = 'none');
+
+                // Add active class to the clicked tab
+                tab.classList.add('active');
+                // Display the corresponding accordion
+                const targetId = tab.getAttribute('data-target');
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        const headers = document.querySelectorAll('.accordion-header');
+
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const active = document.querySelector('.accordion-header.active');
+                if (active && active !== header) {
+                    active.classList.remove('active');
+                    active.nextElementSibling.style.maxHeight = null;
+                }
+
+                header.classList.toggle('active');
+                const content = header.nextElementSibling;
+                if (header.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
+        function searchQuestions() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const activeAccordion = document.querySelector('.accordion:not([style*="display: none"])');
+            const questions = activeAccordion.querySelectorAll('.accordion-item');
+
+            questions.forEach(item => {
+                const questionText = item.querySelector('.accordion-header').textContent.toLowerCase();
+                if (questionText.includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
